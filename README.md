@@ -1,2 +1,1 @@
-# Vicatus.com
-Vicatus Website. 
+vicatus.com
