@@ -1,198 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ViCatus — You Tried Willpower. Now Try Intelligence.</title>
-    <meta name="description" content="ViCatus is the all-in-one AI-powered health app that tracks calories, steps, workouts, and helps you lose fat intelligently."/>
-    
-    <link rel="icon" href="vicatus-logo.png" type="image/png"/>
-    <link rel="apple-touch-icon" href="vicatus-logo.png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-    
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --dark: #060c12;
-            --teal: #00d4b8;
-            --blue: #1a7cff;
-            --text: #e2eef7;
-            --muted: #6b90aa;
-        }
-        
-        body {
-            background: var(--dark);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-        
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.4rem 8%;
-            background: rgba(6,12,18,0.95);
-            backdrop-filter: blur(16px);
-            z-index: 100;
-        }
-        
-        .nav-logo img { width: 45px; height: 45px; border-radius: 50%; }
-        .nav-brand { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; }
-        .nav-brand span:last-child {
-            background: linear-gradient(90deg, #60a5fa, #34d399);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-        .nav-links a {
-            color: var(--muted);
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-        
-        /* HERO - Much better spacing for desktop */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 8% 100px;
-            position: relative;
-        }
-        
-        .app-icon {
-            width: 160px;
-            height: 160px;
-            border-radius: 36px;
-            overflow: hidden;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 0 80px rgba(0,212,184,0.7);
-        }
-        
-        .hero-title {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(3.5rem, 8vw, 6.2rem);
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-        
-        .hero-title span:last-child {
-            background: linear-gradient(90deg, #60a5fa, #34d399);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .tagline {
-            font-size: 1.25rem;
-            color: var(--muted);
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            margin-bottom: 3rem;
-        }
-        
-        .willpower {
-            background: rgba(15,31,46,0.9);
-            border: 1px solid rgba(0,212,184,0.35);
-            border-radius: 24px;
-            padding: 2.5rem 3.5rem;
-            max-width: 520px;
-            font-size: 1.55rem;
-            line-height: 1.4;
-            margin-bottom: 3.5rem;
-        }
-        
-        /* Download Buttons - Much cleaner */
-        .dl-stack {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 520px;
-            margin: 0 auto;
-        }
-        
-        .dl-btn {
-            display: flex;
-            align-items: center;
-            padding: 1rem 2rem;
-            border-radius: 16px;
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
-            min-width: 240px;
-            transition: all 0.3s;
-        }
-        
-        .dl-btn:hover { transform: translateY(-6px); }
-        
-        .dl-apple {
-            background: linear-gradient(135deg, #1a5cf8, #22c55e);
-        }
-        
-        .dl-google {
-            background: linear-gradient(135deg, #ec4899, #00d4b8);
-        }
-        
-        .free {
-            margin-top: 2rem;
-            color: var(--muted);
-            font-size: 1rem;
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ViCatus — You Tried Willpower. Now Try Intelligence.</title>
+<meta name="description" content="ViCatus is the all-in-one health app that tracks calories, steps, workouts, and fat loss — powered by AI. Free on iOS and Android."/>
+
+<!-- Open Graph -->
+<meta property="og:url" content="https://vibecores.fit"/>
+<meta property="og:title" content="ViCatus — You Tried Willpower. Now Try Intelligence."/>
+<meta property="og:description" content="Track calories, log workouts with AI, and shop healthy products — all in one app."/>
+<meta property="og:image" content="https://vibecores.fit/og-image.png"/>
+
+<link rel="icon" href="vicatus-logo.png" type="image/png"/>
+<link rel="apple-touch-icon" href="vicatus-logo.png"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+* {box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#060c12;
+  --panel:#0a1520;
+  --card:#0f1f2e;
+  --border:#1a3347;
+  --teal:#00d4b8;
+  --blue:#1a7cff;
+  --text:#e2eef7;
+  --muted:#6b90aa;
+}
+body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 8%;
+  background:rgba(6,12,18,0.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(0,212,184,0.1)
+}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo img{width:45px;height:45px;border-radius:50%}
+.nav-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1.75rem;letter-spacing:-0.02em}
+.nav-vi{color:#ffffff}
+.nav-catus{
+  background:linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;letter-spacing:0.05em;text-transform:uppercase}
+.nav-links a:hover{color:var(--teal)}
+
+/* HERO - Better spacing */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  padding:120px 8% 80px;
+  position:relative;
+}
+.app-icon{
+  width:160px;height:160px;border-radius:36px;overflow:hidden;
+  margin:0 auto 2rem;
+  box-shadow:0 0 60px rgba(0,212,184,0.7);
+}
+.hero-title{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(3.2rem,8vw,5.8rem);
+  letter-spacing:-0.04em;line-height:1;margin-bottom:0.8rem;
+}
+.hero-catus{
+  background:linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.willpower{
+  background:rgba(15,31,46,0.9);
+  border:1px solid rgba(0,212,184,0.3);
+  border-radius:20px;padding:2rem 3rem;
+  max-width:480px;margin:0 auto 2.5rem;
+}
+
+/* Download Buttons */
+.dl-stack{
+  display:flex;flex-direction:column;gap:1.2rem;max-width:420px;margin:0 auto
+}
+.dl-btn{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 1.6rem;border-radius:14px;text-decoration:none;
+  color:white;font-weight:600;
+}
+.dl-apple{background:linear-gradient(135deg,#1a5cf8,#22c55e)}
+.dl-google{background:linear-gradient(135deg,#ec4899,#00d4b8)}
+.dl-left{display:flex;align-items:center;gap:0.8rem}
+.dl-icon svg{width:28px;height:28px;fill:white}
+.dl-text{text-align:left}
+.dl-big{font-size:1.1rem}
+</style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="nav-logo">
-            <img src="vicatus-logo.png" alt="ViCatus"/>
-            <span class="nav-brand"><span>Vi</span><span>Catus</span></span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how">How It Works</a></li>
-            <li><a href="#download" class="btn">Download Free</a></li>
-        </ul>
-    </nav>
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="vicatus-logo.png" alt="ViCatus"/>
+    <span class="nav-brand"><span class="nav-vi">Vi</span><span class="nav-catus">Catus</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#download" class="btn">Download Free</a></li>
+  </ul>
+</nav>
 
-    <section class="hero" id="download">
-        <div class="app-icon">
-            <img src="vicatus-logo.png" alt="ViCatus App Icon" style="width:100%;height:100%;object-fit:cover;">
+<!-- HERO -->
+<section class="hero" id="download">
+  <div class="app-icon">
+    <img src="vicatus-logo.png" alt="ViCatus App Icon" style="width:100%;height:100%;object-fit:cover;">
+  </div>
+  <h1 class="hero-title"><span class="nav-vi">Vi</span><span class="hero-catus">Catus</span></h1>
+  <p class="hero-sub" style="font-size:1.1rem;color:var(--muted);margin-bottom:2rem">TRACK • EAT SMART • SHOP • REACH YOUR GOAL</p>
+  
+  <div class="willpower">
+    <p>You tried willpower.</p>
+    <h2 style="font-size:1.8rem;margin-top:0.5rem">Now try Intelligence.</h2>
+  </div>
+
+  <div class="dl-stack">
+    <a href="YOUR_APP_STORE_LINK_HERE" class="dl-btn dl-apple" target="_blank">
+      <div class="dl-left">
+        <div class="dl-icon">
+          <svg viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5..."/></svg>
         </div>
-        
-        <h1 class="hero-title"><span>Vi</span><span>Catus</span></h1>
-        <p class="tagline">TRACK • EAT SMART • SHOP • REACH YOUR GOAL</p>
-        
-        <div class="willpower">
-            You tried willpower.<br>Now try Intelligence.
+        <div class="dl-text">
+          <span style="font-size:0.75rem">Download on the</span><br>
+          <span class="dl-big">App Store</span>
         </div>
-        
-        <div class="dl-stack">
-            <a href="YOUR_APP_STORE_LINK_HERE" class="dl-btn dl-apple" target="_blank" rel="noopener">
-                Download on the App Store
-            </a>
-            <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="dl-btn dl-google" target="_blank" rel="noopener">
-                Get it on Google Play
-            </a>
+      </div>
+    </a>
+    <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="dl-btn dl-google" target="_blank">
+      <div class="dl-left">
+        <div class="dl-icon">▶</div>
+        <div class="dl-text">
+          <span style="font-size:0.75rem">GET IT ON</span><br>
+          <span class="dl-big">Google Play</span>
         </div>
-        
-        <p class="free">Free to download • Available on iOS and Android</p>
-    </section>
+      </div>
+    </a>
+  </div>
+</section>
 
 </body>
 </html>
