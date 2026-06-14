@@ -4,19 +4,10 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ViCatus — You Tried Willpower. Now Try Intelligence.</title>
-    <meta name="description" content="ViCatus is the all-in-one AI-powered health app that tracks calories, steps, workouts, and helps you lose fat intelligently. Free on iOS and Android."/>
+    <meta name="description" content="ViCatus is the all-in-one AI-powered health app that tracks calories, steps, workouts, and helps you lose fat intelligently."/>
     
-    <!-- Open Graph -->
-    <meta property="og:url" content="https://vibecores.fit"/>
-    <meta property="og:title" content="ViCatus — You Tried Willpower. Now Try Intelligence."/>
-    <meta property="og:description" content="Track calories, eat smart with AI, shop healthy products — all in one app."/>
-    <meta property="og:image" content="https://vibecores.fit/og-image.png"/>
-    
-    <!-- Favicon & Logo -->
     <link rel="icon" href="vicatus-logo.png" type="image/png"/>
     <link rel="apple-touch-icon" href="vicatus-logo.png"/>
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     
     <style>
@@ -36,40 +27,20 @@
             overflow-x: hidden;
         }
         
-        /* NAV */
         nav {
             position: fixed;
             top: 0; left: 0; right: 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1.2rem 6%;
+            padding: 1.4rem 8%;
             background: rgba(6,12,18,0.95);
             backdrop-filter: blur(16px);
             z-index: 100;
-            border-bottom: 1px solid rgba(0,212,184,0.1);
         }
         
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-        
-        .nav-logo img {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-        }
-        
-        .nav-brand {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 1.7rem;
-            letter-spacing: -0.03em;
-        }
-        
+        .nav-logo img { width: 45px; height: 45px; border-radius: 50%; }
+        .nav-brand { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; }
         .nav-brand span:last-child {
             background: linear-gradient(90deg, #60a5fa, #34d399);
             -webkit-background-clip: text;
@@ -78,38 +49,18 @@
         
         .nav-links {
             display: flex;
-            align-items: center;
-            gap: 2.8rem;
+            gap: 3rem;
             list-style: none;
         }
-        
         .nav-links a {
             color: var(--muted);
             text-decoration: none;
             font-weight: 500;
             text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.08em;
+            font-size: 0.9rem;
         }
         
-        .nav-links a:hover { color: white; }
-        
-        .btn {
-            background: linear-gradient(135deg, var(--teal), var(--blue));
-            color: #000 !important;
-            padding: 0.7rem 1.8rem;
-            border-radius: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0,212,184,0.4);
-        }
-        
-        /* HERO */
+        /* HERO - Much better spacing for desktop */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -117,40 +68,26 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            padding: 120px 8% 100px;
             position: relative;
-            padding: 100px 6% 80px;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 50% 30%, rgba(0,212,184,0.18) 0%, transparent 70%);
         }
         
         .app-icon {
-            width: 148px;
-            height: 148px;
-            border-radius: 34px;
+            width: 160px;
+            height: 160px;
+            border-radius: 36px;
             overflow: hidden;
-            margin-bottom: 2rem;
-            box-shadow: 0 0 70px rgba(0,212,184,0.7),
-                        0 0 140px rgba(0,212,184,0.4);
-            animation: glow 4s ease-in-out infinite;
-        }
-        
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 70px rgba(0,212,184,0.7), 0 0 140px rgba(0,212,184,0.4); }
-            50% { box-shadow: 0 0 90px rgba(0,212,184,0.95), 0 0 180px rgba(0,212,184,0.6); }
+            margin-bottom: 2.5rem;
+            box-shadow: 0 0 80px rgba(0,212,184,0.7);
         }
         
         .hero-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(3.4rem, 9vw, 6rem);
+            font-size: clamp(3.5rem, 8vw, 6.2rem);
             font-weight: 800;
             letter-spacing: -0.04em;
             line-height: 1;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
         
         .hero-title span:last-child {
@@ -160,65 +97,69 @@
         }
         
         .tagline {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             color: var(--muted);
-            letter-spacing: 0.2em;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
         
         .willpower {
             background: rgba(15,31,46,0.9);
-            border: 1px solid rgba(0,212,184,0.3);
-            border-radius: 20px;
-            padding: 2.2rem 3rem;
-            max-width: 480px;
-            font-size: 1.45rem;
-            line-height: 1.35;
-            margin-bottom: 3rem;
+            border: 1px solid rgba(0,212,184,0.35);
+            border-radius: 24px;
+            padding: 2.5rem 3.5rem;
+            max-width: 520px;
+            font-size: 1.55rem;
+            line-height: 1.4;
+            margin-bottom: 3.5rem;
         }
         
+        /* Download Buttons - Much cleaner */
         .dl-stack {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 380px;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 520px;
             margin: 0 auto;
         }
         
         .dl-btn {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 1rem 1.6rem;
-            border-radius: 14px;
+            padding: 1rem 2rem;
+            border-radius: 16px;
             text-decoration: none;
             color: white;
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
+            min-width: 240px;
             transition: all 0.3s;
         }
         
-        .dl-btn:hover { transform: translateY(-4px); }
+        .dl-btn:hover { transform: translateY(-6px); }
         
-        .dl-apple { background: linear-gradient(135deg, #1a5cf8, #22c55e); }
-        .dl-google { background: linear-gradient(135deg, #ec4899, #00d4b8); }
+        .dl-apple {
+            background: linear-gradient(135deg, #1a5cf8, #22c55e);
+        }
+        
+        .dl-google {
+            background: linear-gradient(135deg, #ec4899, #00d4b8);
+        }
         
         .free {
-            text-align: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
             color: var(--muted);
-            font-size: 0.9rem;
-            letter-spacing: 0.1em;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
     <nav>
         <a href="#" class="nav-logo">
-            <img src="vicatus-logo.png" alt="ViCatus Logo"/>
+            <img src="vicatus-logo.png" alt="ViCatus"/>
             <span class="nav-brand"><span>Vi</span><span>Catus</span></span>
         </a>
         <ul class="nav-links">
@@ -229,10 +170,9 @@
         </ul>
     </nav>
 
-    <!-- HERO -->
     <section class="hero" id="download">
         <div class="app-icon">
-            <img src="vicatus-logo.png" alt="ViCatus App Icon" style="width:100%; height:100%; object-fit:cover;">
+            <img src="vicatus-logo.png" alt="ViCatus App Icon" style="width:100%;height:100%;object-fit:cover;">
         </div>
         
         <h1 class="hero-title"><span>Vi</span><span>Catus</span></h1>
@@ -251,7 +191,7 @@
             </a>
         </div>
         
-        <p class="free">Free to download • No credit card required</p>
+        <p class="free">Free to download • Available on iOS and Android</p>
     </section>
 
 </body>
