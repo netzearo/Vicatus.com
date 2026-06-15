@@ -3,20 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ViCatus â€” You Tried Willpower. Now Try Intelligence.</title>
+<title>ViCatus &mdash; You Tried Willpower. Now Try Intelligence.</title>
 <meta name="description" content="ViCatus is the all-in-one AI health app that tracks calories, steps, workouts, and real fat loss. Free on iOS and Android."/>
-<meta name="keywords" content="health app, fitness tracker, calorie tracker, fat loss, AI nutrition, weight loss app, ViCatus"/>
-<meta name="author" content="ViCatus"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://vicatus.com/"/>
-<meta property="og:title" content="ViCatus â€” You Tried Willpower. Now Try Intelligence."/>
-<meta property="og:description" content="Track calories, log workouts with AI, and shop healthy products â€” all in one app. Free on iOS and Android."/>
-<meta property="og:image" content="https://vicatus.com/vicatus-logo.png"/>
+<meta property="og:title" content="ViCatus &mdash; You Tried Willpower. Now Try Intelligence."/>
+<meta property="og:description" content="Track calories, log workouts with AI, and shop healthy products &mdash; all in one app."/>
+<meta property="og:image" content="https://vicatus.com/vicatus-logo.PNG"/>
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="ViCatus â€” You Tried Willpower. Now Try Intelligence."/>
-<meta property="twitter:description" content="Track calories, log workouts with AI, and shop healthy products â€” all in one app."/>
-<link rel="icon" type="image/png" href="vicatus-logo.png"/>
-<link rel="apple-touch-icon" href="vicatus-logo.png"/>
+<link rel="icon" type="image/png" href="vicatus-logo.PNG"/>
+<link rel="apple-touch-icon" href="vicatus-logo.PNG"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
@@ -36,351 +32,260 @@
 html{scroll-behavior:smooth}
 body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
 
-/* â”€â”€ PARTICLES â”€â”€ */
+/* PARTICLES */
 #particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
 .particle{position:absolute;border-radius:50%;opacity:0;animation:float linear infinite}
-@keyframes float{
-  0%{transform:translateY(100vh) scale(0);opacity:0}
-  10%{opacity:1}
-  90%{opacity:0.6}
-  100%{transform:translateY(-100px) scale(1);opacity:0}
-}
+@keyframes float{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:0.8}90%{opacity:0.4}100%{transform:translateY(-100px) scale(1);opacity:0}}
 
-/* â”€â”€ NAV â”€â”€ */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0.8rem 6%;
-  background:rgba(6,12,18,0.85);
-  backdrop-filter:blur(24px);
-  border-bottom:1px solid rgba(0,212,184,0.15);
-  transition:all 0.3s
-}
-nav.scrolled{background:rgba(6,12,18,0.98);box-shadow:0 4px 30px rgba(0,0,0,0.4)}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.9rem 5%;background:rgba(6,12,18,0.9);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,212,184,0.12);transition:all 0.3s}
+nav.scrolled{background:rgba(6,12,18,0.98);box-shadow:0 4px 30px rgba(0,0,0,0.5)}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-logo img{width:40px;height:40px;border-radius:50%;box-shadow:0 0 16px rgba(0,212,184,0.6)}
-.nav-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-0.02em;display:inline-flex;align-items:baseline}
-.nav-vi{color:#ffffff;-webkit-text-fill-color:#ffffff}
-.nav-catus{background:linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent}
+.nav-logo img{width:38px;height:38px;border-radius:50%;box-shadow:0 0 14px rgba(0,212,184,0.6)}
+.nav-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1.45rem;letter-spacing:-0.02em;display:inline-flex;align-items:baseline}
+.nav-vi{color:#fff;-webkit-text-fill-color:#fff}
+.nav-catus{background:linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;position:relative;padding-bottom:4px}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;padding-bottom:4px;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:linear-gradient(90deg,var(--teal),var(--blue));transition:width 0.3s}
-.nav-links a:hover{color:var(--white)}
+.nav-links a:hover{color:#fff}
 .nav-links a:hover::after{width:100%}
-.nav-dl{background:linear-gradient(135deg,var(--teal),var(--blue));color:var(--dark)!important;padding:0.55rem 1.4rem;border-radius:8px;font-weight:700!important;font-size:0.82rem!important;letter-spacing:0.05em;transition:filter 0.2s,transform 0.2s!important}
-.nav-dl:hover{filter:brightness(1.15);transform:translateY(-1px)!important}
-.nav-dl::after{display:none!important}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:101}
+.nav-dl{background:linear-gradient(135deg,var(--teal),var(--blue)) !important;color:var(--dark) !important;padding:0.55rem 1.4rem !important;border-radius:8px;font-weight:700 !important}
+.nav-dl::after{display:none !important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:22px;height:2px;background:var(--muted);border-radius:2px;transition:all 0.3s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-menu{
-  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
-  background:rgba(6,12,18,0.98);backdrop-filter:blur(24px);
-  z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem
-}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(6,12,18,0.99);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
 .mobile-menu.open{display:flex}
-.mobile-menu a{color:var(--white);text-decoration:none;font-family:'Syne',sans-serif;font-size:2rem;font-weight:700;opacity:0;transform:translateY(20px);transition:color 0.2s}
-.mobile-menu.open a{animation:menuIn 0.4s forwards}
-.mobile-menu.open a:nth-child(1){animation-delay:0.05s}
-.mobile-menu.open a:nth-child(2){animation-delay:0.1s}
-.mobile-menu.open a:nth-child(3){animation-delay:0.15s}
-.mobile-menu.open a:nth-child(4){animation-delay:0.2s}
-@keyframes menuIn{to{opacity:1;transform:translateY(0)}}
+.mobile-menu a{color:#fff;text-decoration:none;font-family:'Syne',sans-serif;font-size:2rem;font-weight:700}
 .mobile-menu a:hover{color:var(--teal)}
 
-/* â”€â”€ HERO â”€â”€ */
+/* HERO — exactly one viewport tall, everything visible */
 .hero{
-  min-height:100vh;display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:8rem 6% 6rem;position:relative;overflow:hidden
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  padding:5rem 5% 3rem;
+  position:relative;overflow:hidden
 }
-.hero-bg{
-  position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 90% 60% at 50% -10%,rgba(74,143,231,0.25) 0%,transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 40%,rgba(0,212,184,0.15) 0%,transparent 50%),
-    radial-gradient(ellipse 40% 40% at 10% 60%,rgba(69,201,124,0.1) 0%,transparent 50%);
-  pointer-events:none
-}
-.hero-grid{
-  position:absolute;inset:0;
-  background-image:linear-gradient(rgba(0,212,184,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,184,0.03) 1px,transparent 1px);
-  background-size:60px 60px;pointer-events:none
-}
-.hero-content{position:relative;z-index:2;max-width:800px;margin:0 auto}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(0,212,184,0.1);border:1px solid rgba(0,212,184,0.3);
-  border-radius:100px;padding:6px 16px;margin-bottom:2.5rem;
-  font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);
-  animation:badgePulse 2s ease-in-out infinite
-}
-@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(0,212,184,0.3)}50%{box-shadow:0 0 0 8px rgba(0,212,184,0)}}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 90% 60% at 50% 0%,rgba(74,143,231,0.22) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 85% 40%,rgba(0,212,184,0.12) 0%,transparent 50%),radial-gradient(ellipse 40% 40% at 15% 65%,rgba(69,201,124,0.08) 0%,transparent 50%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,184,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,184,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:720px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,184,0.1);border:1px solid rgba(0,212,184,0.3);border-radius:100px;padding:5px 16px;margin-bottom:1.2rem;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal)}
 .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);animation:dot 1.5s ease-in-out infinite}
-@keyframes dot{0%,100%{opacity:1}50%{opacity:0.3}}
-.app-icon{
-  width:120px;height:120px;border-radius:28px;overflow:hidden;
-  margin:0 auto 2.5rem;
-  box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 0 40px rgba(0,212,184,0.5),0 0 100px rgba(0,212,184,0.2);
-  animation:iconGlow 3s ease-in-out infinite;
-  position:relative
-}
+@keyframes dot{0%,100%{opacity:1}50%{opacity:0.2}}
+.app-icon{width:90px;height:90px;border-radius:22px;overflow:hidden;margin-bottom:1.2rem;box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 0 40px rgba(0,212,184,0.55),0 0 90px rgba(0,212,184,0.2);animation:iconGlow 3s ease-in-out infinite}
 .app-icon img{width:100%;height:100%;object-fit:cover;display:block}
-@keyframes iconGlow{
-  0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 0 40px rgba(0,212,184,0.5),0 0 100px rgba(0,212,184,0.2)}
-  50%{box-shadow:0 0 0 1px rgba(255,255,255,0.15),0 0 60px rgba(0,212,184,0.8),0 0 140px rgba(0,212,184,0.4)}
-}
-.hero-title{
-  font-family:'Syne',sans-serif;font-weight:800;
-  font-size:clamp(4rem,10vw,7.5rem);
-  letter-spacing:-0.05em;line-height:0.95;margin-bottom:1.5rem;
-  display:flex;align-items:baseline;justify-content:center
-}
-.hero-vi{color:#ffffff;-webkit-text-fill-color:#ffffff}
-.hero-catus{background:linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent}
-.hero-sub{font-size:0.85rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:2.5rem}
-.willpower{
-  background:linear-gradient(135deg,rgba(15,31,46,0.95),rgba(10,21,32,0.95));
-  border:1px solid rgba(0,212,184,0.2);
-  border-radius:20px;padding:2rem 2.5rem;
-  margin:0 auto 2.5rem;max-width:460px;
-  position:relative;overflow:hidden
-}
-.willpower::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(0,212,184,0.5),transparent)
-}
-.willpower p{font-size:1.1rem;color:var(--muted);margin-bottom:0.4rem}
-.willpower h2{
-  font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;
-  background:linear-gradient(135deg,#4A8FE7,#3DBFA0,#45C97C);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2
-}
-.hero-tagline{font-size:0.8rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:3rem}
-.dl-stack{display:flex;flex-direction:column;gap:1rem;max-width:380px;margin:0 auto 1.5rem}
-.dl-btn{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1rem 1.6rem;border-radius:14px;text-decoration:none;
-  transition:transform 0.25s,filter 0.25s,box-shadow 0.25s;
-  position:relative;overflow:hidden
-}
-.dl-btn::before{content:'';position:absolute;inset:0;opacity:0;background:rgba(255,255,255,0.1);transition:opacity 0.2s}
-.dl-btn:hover::before{opacity:1}
-.dl-btn:hover{transform:translateY(-3px)}
-.dl-apple{background:linear-gradient(135deg,#1a5cf8,#22c55e);box-shadow:0 8px 30px rgba(26,92,248,0.35)}
-.dl-apple:hover{box-shadow:0 12px 40px rgba(26,92,248,0.5)}
-.dl-google{background:linear-gradient(135deg,#ec4899,#00d4b8);box-shadow:0 8px 30px rgba(236,72,153,0.35)}
-.dl-google:hover{box-shadow:0 12px 40px rgba(236,72,153,0.5)}
-.dl-left{display:flex;align-items:center;gap:1rem}
+@keyframes iconGlow{0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 0 40px rgba(0,212,184,0.55),0 0 90px rgba(0,212,184,0.2)}50%{box-shadow:0 0 0 1px rgba(255,255,255,0.15),0 0 60px rgba(0,212,184,0.85),0 0 130px rgba(0,212,184,0.35)}}
+.hero-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3.5rem,9vw,6.5rem);letter-spacing:-0.05em;line-height:0.95;margin-bottom:0.8rem;display:flex;align-items:baseline;justify-content:center}
+.hero-vi{color:#fff;-webkit-text-fill-color:#fff}
+.hero-catus{background:linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:0.82rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem}
+.willpower{background:linear-gradient(135deg,rgba(15,31,46,0.95),rgba(10,21,32,0.95));border:1px solid rgba(0,212,184,0.2);border-radius:16px;padding:1.2rem 2rem;margin-bottom:1rem;width:100%;max-width:420px;position:relative;overflow:hidden}
+.willpower::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,184,0.5),transparent)}
+.willpower p{font-size:0.95rem;color:var(--muted);margin-bottom:0.3rem}
+.willpower h2{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#4A8FE7,#3DBFA0,#45C97C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2}
+.hero-tagline{font-size:0.75rem;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1.4rem}
+.dl-stack{display:flex;flex-direction:column;gap:0.8rem;width:100%;max-width:360px;margin-bottom:0.8rem}
+.dl-btn{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 1.4rem;border-radius:12px;text-decoration:none;transition:transform 0.2s,filter 0.2s}
+.dl-btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.dl-apple{background:linear-gradient(135deg,#1a5cf8,#22c55e);box-shadow:0 6px 24px rgba(26,92,248,0.3)}
+.dl-google{background:linear-gradient(135deg,#ec4899,#00d4b8);box-shadow:0 6px 24px rgba(236,72,153,0.3)}
+.dl-left{display:flex;align-items:center;gap:0.8rem}
 .dl-icon{display:flex;align-items:center;justify-content:center;width:28px}
-.dl-icon svg{width:26px;height:26px;fill:white}
-.dl-play{width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:19px solid white;margin-left:3px}
+.dl-icon i{font-size:26px;color:#fff}
+.dl-play{width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:17px solid white;margin-left:3px}
 .dl-text{text-align:left}
-.dl-small{display:block;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.7)}
-.dl-big{display:block;font-size:1.05rem;font-weight:700;color:white}
-.dl-arrow{color:rgba(255,255,255,0.7);font-size:1.2rem}
-.free{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);text-align:center}
+.dl-small{display:block;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.7)}
+.dl-big{display:block;font-size:1rem;font-weight:700;color:#fff}
+.dl-arrow{color:rgba(255,255,255,0.7);font-size:1.1rem}
+.free{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
 
-/* â”€â”€ DESKTOP TABS â”€â”€ */
-.tabs-section{position:relative;z-index:1;background:var(--panel);border-top:1px solid var(--border)}
-.tabs-nav{display:flex;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none}
+/* FULL-SCREEN SECTIONS */
+.fullscreen{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:5rem 5%;
+  position:relative;
+}
+.fullscreen-inner{max-width:1100px;margin:0 auto;width:100%}
+
+/* TABS SECTION */
+.tabs-section{background:var(--panel);border-top:1px solid var(--border);min-height:100vh;display:flex;flex-direction:column}
+.tabs-nav{display:flex;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;flex-shrink:0}
 .tabs-nav::-webkit-scrollbar{display:none}
-.tab-btn{
-  flex:1;min-width:140px;padding:1.2rem 1.5rem;
-  background:none;border:none;cursor:pointer;
-  font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:500;
-  color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;
-  border-bottom:2px solid transparent;
-  transition:all 0.3s;white-space:nowrap
-}
-.tab-btn:hover{color:var(--white);background:rgba(255,255,255,0.03)}
-.tab-btn.active{color:var(--teal);border-bottom-color:var(--teal);background:rgba(0,212,184,0.05)}
-.tab-content{display:none;padding:4rem 6%;max-width:1100px;margin:0 auto;animation:tabIn 0.4s ease}
-.tab-content.active{display:block}
-@keyframes tabIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.tab-btn{flex:1;min-width:160px;padding:1.3rem 1rem;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:500;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;border-bottom:2px solid transparent;transition:all 0.3s;white-space:nowrap}
+.tab-btn:hover{color:#fff;background:rgba(255,255,255,0.02)}
+.tab-btn.active{color:var(--teal);border-bottom-color:var(--teal);background:rgba(0,212,184,0.04)}
+.tab-content{display:none;flex:1;padding:4rem 5%;max-width:1100px;margin:0 auto;width:100%;animation:tabIn 0.35s ease}
+.tab-content.active{display:flex;flex-direction:column;justify-content:center}
+@keyframes tabIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-/* â”€â”€ TAB: TRACK â”€â”€ */
-.track-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+/* TRACK TAB */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .track-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.stat-card{
-  background:var(--card);border:1px solid var(--border);border-radius:16px;
-  padding:1.4rem;transition:transform 0.3s,border-color 0.3s
-}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;transition:transform 0.3s,border-color 0.3s}
 .stat-card:hover{transform:translateY(-3px);border-color:rgba(0,212,184,0.3)}
-.stat-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.4rem;display:flex;align-items:center;gap:6px}
-.stat-label i{font-size:14px}
-.stat-value{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--white);margin-bottom:0.3rem}
-.stat-sub{font-size:0.72rem;color:var(--teal)}
+.stat-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.4rem}
+.stat-value{font-family:'Syne',sans-serif;font-size:1.7rem;font-weight:800;color:#fff;margin-bottom:0.25rem}
+.stat-sub{font-size:0.7rem;color:var(--teal)}
 .bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:0.6rem}
-.bar-fill{height:100%;border-radius:2px;transition:width 1s ease}
+.bar-fill{height:100%;border-radius:2px}
+.truth-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:2rem;text-align:center}
+.truth-num{font-family:'Syne',sans-serif;font-size:3.2rem;font-weight:800;background:linear-gradient(135deg,#4A8FE7,#3DBFA0,#45C97C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:0.5rem 0}
+.truth-note{background:rgba(0,212,184,0.08);border:1px solid rgba(0,212,184,0.2);border-radius:10px;padding:0.9rem;font-size:0.82rem;color:var(--muted);line-height:1.6;margin-top:1rem}
 
-/* â”€â”€ TAB: NUTRITION â”€â”€ */
-.nutrition-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.macro-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.8rem;margin-bottom:1rem}
-.macro-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:1.2rem}
-.macro-row{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
-.macro-name{font-size:0.8rem;color:var(--muted);width:70px;flex-shrink:0}
+/* NUTRITION TAB */
+.macro-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.6rem;margin-bottom:1rem}
+.macro-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:1.2rem}
+.macro-row{display:flex;align-items:center;gap:1rem;margin-bottom:0.9rem}
+.macro-name{font-size:0.78rem;color:var(--muted);width:65px;flex-shrink:0}
 .macro-bar-bg{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
 .macro-bar-fill{height:100%;border-radius:3px}
-.macro-val{font-size:0.8rem;font-weight:600;color:var(--white);width:50px;text-align:right;flex-shrink:0}
-.ai-recipe{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.4rem;display:flex;gap:1rem;align-items:center;margin-bottom:0.8rem;transition:border-color 0.3s}
+.macro-val{font-size:0.78rem;font-weight:600;color:#fff;width:45px;text-align:right;flex-shrink:0}
+.ai-recipe{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.2rem;display:flex;gap:1rem;align-items:center;margin-bottom:0.8rem;transition:border-color 0.3s}
 .ai-recipe:hover{border-color:rgba(0,212,184,0.3)}
-.recipe-emoji{font-size:2.2rem;width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#1a3a2a,#2a5a3a);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.recipe-name{font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:0.3rem}
-.recipe-cal{font-size:0.78rem;color:var(--teal);font-weight:600}
+.recipe-emoji{font-size:2rem;width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,#1a3a2a,#2a5a3a);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.recipe-name{font-size:0.88rem;font-weight:600;color:#fff;margin-bottom:0.25rem}
+.recipe-cal{font-size:0.75rem;color:var(--teal);font-weight:600}
 
-/* â”€â”€ TAB: FITNESS â”€â”€ */
-.fitness-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
-.workout-entry{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.4rem;margin-bottom:0.8rem;display:flex;justify-content:space-between;align-items:center;transition:border-color 0.3s}
+/* FITNESS TAB */
+.workout-entry{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.1rem 1.3rem;margin-bottom:0.7rem;display:flex;justify-content:space-between;align-items:center;transition:border-color 0.3s}
 .workout-entry:hover{border-color:rgba(0,212,184,0.3)}
-.workout-name{font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:0.2rem}
-.workout-detail{font-size:0.75rem;color:var(--muted)}
+.workout-name{font-size:0.88rem;font-weight:600;color:#fff;margin-bottom:0.2rem}
+.workout-detail{font-size:0.73rem;color:var(--muted)}
 .workout-cal{font-size:0.9rem;font-weight:600;color:var(--teal)}
-.ai-input-box{background:var(--card);border:1px solid rgba(0,212,184,0.25);border-radius:16px;padding:1.8rem}
-.ai-input-label{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem}
-.ai-input-text{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:1rem;color:var(--muted);font-size:0.88rem;line-height:1.6;font-style:italic;margin-bottom:1rem}
+.ai-input-box{background:var(--card);border:1px solid rgba(0,212,184,0.25);border-radius:14px;padding:1.6rem}
+.ai-input-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.7rem}
+.ai-input-text{background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:1rem;color:var(--muted);font-size:0.86rem;line-height:1.6;font-style:italic;margin-bottom:1rem}
 .ai-chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{background:rgba(0,212,184,0.1);border:1px solid rgba(0,212,184,0.3);border-radius:100px;padding:4px 12px;font-size:0.72rem;color:var(--teal)}
+.chip{background:rgba(0,212,184,0.1);border:1px solid rgba(0,212,184,0.3);border-radius:100px;padding:3px 11px;font-size:0.7rem;color:var(--teal)}
 
-/* â”€â”€ TAB: MARKET â”€â”€ */
-.market-hero{background:linear-gradient(135deg,rgba(0,212,184,0.1),rgba(26,124,255,0.1));border:1px solid rgba(0,212,184,0.2);border-radius:20px;padding:2rem;margin-bottom:2rem;text-align:center}
-.market-hero h3{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--white);margin-bottom:0.5rem}
-.market-hero p{font-size:0.9rem;color:var(--muted)}
+/* MARKET TAB */
+.market-hero{background:linear-gradient(135deg,rgba(0,212,184,0.1),rgba(26,124,255,0.1));border:1px solid rgba(0,212,184,0.2);border-radius:18px;padding:1.8rem;margin-bottom:1.5rem;text-align:center}
+.market-hero h3{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:0.4rem}
+.market-hero p{font-size:0.88rem;color:var(--muted)}
 .market-products{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.product-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;transition:transform 0.3s,border-color 0.3s}
+.product-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.2rem;transition:transform 0.3s,border-color 0.3s}
 .product-card:hover{transform:translateY(-4px);border-color:rgba(0,212,184,0.3)}
-.product-emoji{font-size:2rem;margin-bottom:0.8rem}
-.product-brand{font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.3rem}
-.product-name{font-size:0.82rem;font-weight:600;color:var(--white);margin-bottom:0.4rem}
-.product-price{font-size:0.82rem;color:var(--teal);font-weight:600}
-.retailers-strip{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;padding:1.5rem 0;border-top:1px solid var(--border);margin-top:1.5rem}
-.retailer-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;color:rgba(255,255,255,0.2);transition:color 0.2s;cursor:default}
+.product-emoji{font-size:1.8rem;margin-bottom:0.7rem}
+.product-brand{font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.25rem}
+.product-name{font-size:0.8rem;font-weight:600;color:#fff;margin-bottom:0.35rem}
+.product-price{font-size:0.8rem;color:var(--teal);font-weight:600}
+.retailers-strip{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;padding:1.2rem 0;border-top:1px solid var(--border);margin-top:1.2rem}
+.retailer-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;color:rgba(255,255,255,0.2);transition:color 0.2s}
 .retailer-name:hover{color:var(--teal)}
 
-/* â”€â”€ FEATURES SECTION â”€â”€ */
-.features-section{padding:6rem 6%;background:var(--dark)}
-.features-inner{max-width:1100px;margin:0 auto}
-.section-tag{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem;text-align:center}
-.section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-0.03em;color:var(--white);line-height:1.1;margin-bottom:1rem;text-align:center}
-.section-sub{color:var(--muted);font-size:1rem;line-height:1.75;text-align:center;max-width:520px;margin:0 auto 3rem}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.feat{
-  background:var(--panel);border:1px solid var(--border);border-radius:18px;
-  padding:2rem;position:relative;overflow:hidden;
-  transition:transform 0.3s,border-color 0.3s
-}
+/* SECTION LABELS */
+.section-tag{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);margin-bottom:0.7rem;text-align:center}
+.section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-0.03em;color:#fff;line-height:1.1;margin-bottom:0.9rem;text-align:center}
+.section-sub{color:var(--muted);font-size:0.95rem;line-height:1.75;text-align:center;max-width:520px;margin:0 auto 2.5rem}
+.left{text-align:left}
+
+/* FEATURES */
+.features-section{background:var(--dark);border-top:1px solid var(--border)}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.feat{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:1.8rem;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s}
 .feat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--blue));opacity:0;transition:opacity 0.3s}
-.feat:hover{transform:translateY(-5px);border-color:rgba(0,212,184,0.3)}
+.feat:hover{transform:translateY(-4px);border-color:rgba(0,212,184,0.28)}
 .feat:hover::before{opacity:1}
-.feat-icon{font-size:2rem;margin-bottom:1.2rem;display:block}
-.feat h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.6rem}
-.feat p{font-size:0.84rem;color:var(--muted);line-height:1.7}
+.feat-icon{font-size:1.8rem;margin-bottom:1rem;display:block}
+.feat h3{font-family:'Syne',sans-serif;font-size:0.98rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.feat p{font-size:0.82rem;color:var(--muted);line-height:1.68}
 
-/* â”€â”€ HOW IT WORKS â”€â”€ */
-.how-section{padding:6rem 6%;background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.how-inner{max-width:1100px;margin:0 auto}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative}
-.steps::before{content:'';position:absolute;top:26px;left:calc(16.6% + 26px);right:calc(16.6% + 26px);height:1px;background:linear-gradient(90deg,var(--teal),var(--blue));z-index:0}
-.step{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:2.2rem 1.8rem;text-align:center;position:relative;z-index:1;transition:transform 0.3s,border-color 0.3s}
-.step:hover{transform:translateY(-5px);border-color:rgba(0,212,184,0.3)}
-.step-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:var(--dark);font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.4rem;box-shadow:0 0 20px rgba(0,212,184,0.4)}
-.step h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.6rem}
-.step p{font-size:0.84rem;color:var(--muted);line-height:1.65}
+/* HOW IT WORKS */
+.how-section{background:var(--panel);border-top:1px solid var(--border)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem 1.6rem;text-align:center;transition:transform 0.3s,border-color 0.3s}
+.step:hover{transform:translateY(-4px);border-color:rgba(0,212,184,0.3)}
+.step-num{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:var(--dark);font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;box-shadow:0 0 18px rgba(0,212,184,0.4)}
+.step h3{font-family:'Syne',sans-serif;font-size:0.98rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.step p{font-size:0.82rem;color:var(--muted);line-height:1.62}
 
-/* â”€â”€ QUOTE â”€â”€ */
-.quote-section{padding:6rem 6%;text-align:center;position:relative;overflow:hidden}
-.quote-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(0,212,184,0.06) 0%,transparent 70%);pointer-events:none}
-.quote-inner{position:relative;z-index:1;max-width:800px;margin:0 auto}
-.quote-mark{font-size:6rem;line-height:0.5;color:rgba(0,212,184,0.2);font-family:Georgia,serif;margin-bottom:1rem;display:block}
-blockquote{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:var(--white);line-height:1.3;margin-bottom:1.2rem}
+/* QUOTE */
+.quote-section{background:var(--dark);border-top:1px solid var(--border);text-align:center;position:relative;overflow:hidden}
+.quote-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(0,212,184,0.07) 0%,transparent 70%);pointer-events:none}
+.quote-inner{position:relative;z-index:1;max-width:750px;margin:0 auto}
+.quote-mark{font-size:5rem;line-height:0.4;color:rgba(0,212,184,0.2);font-family:Georgia,serif;display:block;margin-bottom:1rem}
+blockquote{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;color:#fff;line-height:1.3;margin-bottom:1.2rem}
 blockquote span{background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-cite{font-size:0.82rem;color:var(--muted);font-style:italic}
+cite{font-size:0.8rem;color:var(--muted);font-style:italic;display:block}
 
-/* â”€â”€ ADVERTISE â”€â”€ */
-.advertise-section{padding:4rem 6%;border-top:1px solid var(--border)}
-.advertise-inner{
-  max-width:700px;margin:0 auto;
-  background:linear-gradient(135deg,rgba(0,212,184,0.08),rgba(26,124,255,0.08));
-  border:1px solid rgba(0,212,184,0.2);border-radius:24px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden
-}
+/* ADVERTISE */
+.advertise-section{background:var(--panel);border-top:1px solid var(--border)}
+.advertise-inner{max-width:680px;margin:0 auto;background:linear-gradient(135deg,rgba(0,212,184,0.07),rgba(26,124,255,0.07));border:1px solid rgba(0,212,184,0.2);border-radius:22px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden}
 .advertise-inner::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,184,0.5),transparent)}
-.advertise-inner h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;color:var(--white);margin-bottom:0.8rem}
-.advertise-inner p{font-size:0.92rem;color:var(--muted);line-height:1.7;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto}
-.advertise-btn{display:inline-block;background:linear-gradient(135deg,var(--teal),var(--blue));color:var(--dark)!important;font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;padding:0.85rem 2.2rem;border-radius:12px;text-decoration:none;transition:filter 0.2s,transform 0.2s;margin-bottom:2rem}
+.advertise-inner h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;color:#fff;margin-bottom:0.7rem}
+.advertise-inner p{font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.8rem;max-width:460px;margin-left:auto;margin-right:auto}
+.advertise-btn{display:inline-block;background:linear-gradient(135deg,var(--teal),var(--blue));color:var(--dark) !important;font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;padding:0.82rem 2.2rem;border-radius:11px;text-decoration:none;transition:filter 0.2s,transform 0.2s}
 .advertise-btn:hover{filter:brightness(1.1);transform:translateY(-2px)}
 
-/* â”€â”€ MODAL â”€â”€ */
+/* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(6,12,18,0.92);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:1rem}
 .modal-overlay.open{display:flex}
-.modal{background:var(--card);border:1px solid rgba(0,212,184,0.25);border-radius:24px;padding:2.8rem;width:100%;max-width:500px;position:relative}
-.modal::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,184,0.5),transparent);border-radius:24px 24px 0 0}
-.modal h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--white);margin-bottom:0.4rem}
-.modal p{font-size:0.86rem;color:var(--muted);margin-bottom:2rem}
-.modal-close{position:absolute;top:1.4rem;right:1.6rem;background:none;border:none;color:var(--muted);font-size:1.5rem;cursor:pointer;line-height:1;transition:color 0.2s}
-.modal-close:hover{color:var(--white)}
-.form-group{margin-bottom:1.2rem}
-.form-group label{display:block;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem}
-.form-group input,.form-group textarea,.form-group select{width:100%;background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:0.8rem 1rem;color:var(--text);font-family:'Inter',sans-serif;font-size:0.9rem;transition:border-color 0.2s;outline:none}
+.modal{background:var(--card);border:1px solid rgba(0,212,184,0.25);border-radius:22px;padding:2.6rem;width:100%;max-width:490px;position:relative}
+.modal h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;color:#fff;margin-bottom:0.4rem}
+.modal p{font-size:0.85rem;color:var(--muted);margin-bottom:1.8rem}
+.modal-close{position:absolute;top:1.3rem;right:1.5rem;background:none;border:none;color:var(--muted);font-size:1.5rem;cursor:pointer;transition:color 0.2s}
+.modal-close:hover{color:#fff}
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.45rem}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:0.78rem 1rem;color:var(--text);font-family:'Inter',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s}
 .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:rgba(0,212,184,0.5)}
-.form-group textarea{resize:vertical;min-height:90px}
+.form-group textarea{resize:vertical;min-height:85px}
 .form-group select option{background:var(--panel)}
-.form-submit{width:100%;padding:0.9rem;background:linear-gradient(135deg,var(--teal),var(--blue));color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;border:none;border-radius:12px;cursor:pointer;transition:filter 0.2s,transform 0.2s;margin-top:0.4rem}
+.form-submit{width:100%;padding:0.88rem;background:linear-gradient(135deg,var(--teal),var(--blue));color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.93rem;border:none;border-radius:11px;cursor:pointer;transition:filter 0.2s,transform 0.2s;margin-top:0.3rem}
 .form-submit:hover{filter:brightness(1.1);transform:translateY(-1px)}
 .form-success{display:none;text-align:center;padding:2rem 0}
-.form-success p{color:var(--teal);font-size:1.1rem;font-weight:600}
+.form-success p{color:var(--teal);font-size:1.05rem;font-weight:600}
 
-/* â”€â”€ CTA â”€â”€ */
-.cta-section{text-align:center;padding:8rem 6%;position:relative;overflow:hidden}
-.cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(0,212,184,0.08) 0%,transparent 70%);pointer-events:none}
-.cta-inner{position:relative;z-index:2}
-.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-0.04em;color:var(--white);line-height:1.1;margin-bottom:1rem}
+/* CTA */
+.cta-section{background:var(--dark);border-top:1px solid var(--border);position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(0,212,184,0.07) 0%,transparent 70%);pointer-events:none}
+.cta-inner{position:relative;z-index:2;text-align:center;max-width:600px;margin:0 auto}
+.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-0.04em;color:#fff;line-height:1.1;margin-bottom:0.9rem}
 .cta-title span{background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.cta-sub{font-size:1rem;color:var(--muted);margin-bottom:3rem;max-width:440px;margin-left:auto;margin-right:auto}
+.cta-sub{font-size:0.95rem;color:var(--muted);margin-bottom:2.5rem}
 
-/* â”€â”€ FOOTER â”€â”€ */
-footer{background:var(--dark);border-top:1px solid var(--border);padding:2.5rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.2rem}
-footer p{font-size:0.75rem;color:var(--muted)}
-.foot-links{display:flex;gap:1.8rem;list-style:none;flex-wrap:wrap}
-.foot-links a{color:var(--muted);text-decoration:none;font-size:0.75rem;transition:color 0.2s}
+/* FOOTER */
+footer{background:var(--dark);border-top:1px solid var(--border);padding:2rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer p{font-size:0.74rem;color:var(--muted)}
+.foot-links{display:flex;gap:1.6rem;list-style:none;flex-wrap:wrap}
+.foot-links a{color:var(--muted);text-decoration:none;font-size:0.74rem;transition:color 0.2s}
 .foot-links a:hover{color:var(--teal)}
-.foot-links .advertise-link{color:var(--teal);font-weight:600}
+.foot-advert{color:var(--teal) !important;font-weight:600}
 
-/* â”€â”€ ANIMATIONS â”€â”€ */
-.fade{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+/* ANIMATIONS */
+.fade{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease}
 .fade.show{opacity:1;transform:translateY(0)}
-.fade-delay-1{transition-delay:0.1s}
-.fade-delay-2{transition-delay:0.2s}
-.fade-delay-3{transition-delay:0.3s}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* RESPONSIVE */
 @media(max-width:900px){
-  .track-grid,.nutrition-grid,.fitness-grid{grid-template-columns:1fr}
+  .two-col,.market-products{grid-template-columns:1fr 1fr}
   .features-grid,.steps{grid-template-columns:1fr 1fr}
-  .market-products{grid-template-columns:1fr 1fr}
-  .steps::before{display:none}
   .nav-links{display:none}
   .hamburger{display:flex}
 }
-@media(max-width:560px){
-  .features-grid,.steps,.market-products{grid-template-columns:1fr}
+@media(max-width:600px){
+  .features-grid,.steps,.market-products,.two-col{grid-template-columns:1fr}
   .track-stats{grid-template-columns:1fr 1fr}
-  .hero-title{font-size:3.5rem}
+  .hero-title{font-size:3.2rem}
   footer{flex-direction:column;text-align:center}
   .foot-links{justify-content:center}
-  .tab-btn{min-width:120px;font-size:0.72rem;padding:1rem}
 }
 </style>
 </head>
 <body>
 
-<!-- Particles -->
 <div id="particles"></div>
 
-<!-- â”€â”€ NAV â”€â”€ -->
+<!-- NAV -->
 <nav id="navbar">
   <a href="#home" class="nav-logo">
-    <img src="vicatus-logo.png" alt="ViCatus"/>
+    <img src="vicatus-logo.PNG" alt="ViCatus logo"/>
     <span class="nav-brand"><span class="nav-vi">Vi</span><span class="nav-catus">Catus</span></span>
   </a>
   <ul class="nav-links">
@@ -394,7 +299,6 @@ footer p{font-size:0.75rem;color:var(--muted)}
   </div>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#tabs" onclick="toggleMenu()">About</a>
   <a href="#features" onclick="toggleMenu()">Features</a>
@@ -402,14 +306,14 @@ footer p{font-size:0.75rem;color:var(--muted)}
   <a href="#download" onclick="toggleMenu()">Download Free</a>
 </div>
 
-<!-- â”€â”€ HERO â”€â”€ -->
+<!-- HERO — everything visible on first load -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-badge">&#9679; Now live on iOS &amp; Android</div>
+    <div class="hero-badge">Now live on iOS &amp; Android</div>
     <div class="app-icon">
-      <img src="vicatus-logo.png" alt="ViCatus App"/>
+      <img src="vicatus-logo.PNG" alt="ViCatus"/>
     </div>
     <h1 class="hero-title"><span class="hero-vi">Vi</span><span class="hero-catus">Catus</span></h1>
     <p class="hero-sub">Track &middot; Eat Smart &middot; Shop &middot; Reach Your Goal</p>
@@ -421,7 +325,7 @@ footer p{font-size:0.75rem;color:var(--muted)}
     <div class="dl-stack fade" id="download">
       <a href="YOUR_APP_STORE_LINK_HERE" class="dl-btn dl-apple" target="_blank" rel="noopener">
         <div class="dl-left">
-          <div class="dl-icon"><i class="fa-brands fa-apple" style="font-size:28px;color:#ffffff;line-height:1;"></i></div>
+          <div class="dl-icon"><i class="fa-brands fa-apple"></i></div>
           <div class="dl-text"><span class="dl-small">Download on the</span><span class="dl-big">App Store</span></div>
         </div>
         <span class="dl-arrow">&#8594;</span>
@@ -438,7 +342,7 @@ footer p{font-size:0.75rem;color:var(--muted)}
   </div>
 </section>
 
-<!-- â”€â”€ DESKTOP TABS â”€â”€ -->
+<!-- TABS — full screen -->
 <section class="tabs-section" id="tabs">
   <div class="tabs-nav">
     <button class="tab-btn active" onclick="switchTab('track',this)">&#128293; Track Everything</button>
@@ -447,100 +351,95 @@ footer p{font-size:0.75rem;color:var(--muted)}
     <button class="tab-btn" onclick="switchTab('market',this)">&#128722; Marketplace</button>
   </div>
 
-  <!-- TRACK TAB -->
+  <!-- TRACK -->
   <div class="tab-content active" id="tab-track">
-    <div class="track-grid">
+    <div class="two-col">
       <div>
-        <p class="section-tag" style="text-align:left">Live Dashboard</p>
-        <h2 class="section-title" style="text-align:left;margin-bottom:1rem">Every number.<br>One glance.</h2>
-        <p style="color:var(--muted);font-size:0.95rem;line-height:1.75;margin-bottom:2rem">Steps, calories, fat loss, TDEE â€” all tracked automatically and updated in real time. No manual entry. No guesswork.</p>
+        <p class="section-tag left">Live Dashboard</p>
+        <h2 class="section-title left" style="margin-bottom:0.8rem">Every number.<br>One glance.</h2>
+        <p style="color:var(--muted);font-size:0.92rem;line-height:1.75;margin-bottom:1.8rem">Steps, calories, fat loss, and TDEE &mdash; all tracked automatically in real time. No manual entry. No guesswork.</p>
         <div class="track-stats">
           <div class="stat-card fade"><div class="stat-label">&#128095; Steps</div><div class="stat-value">10,833</div><div class="stat-sub">of 15,000 goal</div><div class="bar"><div class="bar-fill" style="width:72%;background:linear-gradient(90deg,#4A8FE7,#3DBFA0)"></div></div></div>
-          <div class="stat-card fade fade-delay-1"><div class="stat-label">&#128293; Cal Burn</div><div class="stat-value">966</div><div class="stat-sub">TDEE today</div><div class="bar"><div class="bar-fill" style="width:43%;background:linear-gradient(90deg,#3DBFA0,#45C97C)"></div></div></div>
-          <div class="stat-card fade fade-delay-2"><div class="stat-label">&#9889; Deficit</div><div class="stat-value">+1,596</div><div class="stat-sub">kcal in deficit</div><div class="bar"><div class="bar-fill" style="width:80%;background:linear-gradient(90deg,#45C97C,#3DBFA0)"></div></div></div>
-          <div class="stat-card fade fade-delay-3"><div class="stat-label">&#9878; Weight</div><div class="stat-value">77.5kg</div><div class="stat-sub">-1kg this week</div><div class="bar"><div class="bar-fill" style="width:55%;background:linear-gradient(90deg,#4A8FE7,#45C97C)"></div></div></div>
+          <div class="stat-card fade d1"><div class="stat-label">&#128293; Cal Burn</div><div class="stat-value">966</div><div class="stat-sub">TDEE today</div><div class="bar"><div class="bar-fill" style="width:43%;background:linear-gradient(90deg,#3DBFA0,#45C97C)"></div></div></div>
+          <div class="stat-card fade d2"><div class="stat-label">&#9889; Deficit</div><div class="stat-value">+1,596</div><div class="stat-sub">kcal in deficit</div><div class="bar"><div class="bar-fill" style="width:80%;background:linear-gradient(90deg,#45C97C,#3DBFA0)"></div></div></div>
+          <div class="stat-card fade d3"><div class="stat-label">&#9878; Weight</div><div class="stat-value">77.5 kg</div><div class="stat-sub">-1 kg this week</div><div class="bar"><div class="bar-fill" style="width:55%;background:linear-gradient(90deg,#4A8FE7,#45C97C)"></div></div></div>
         </div>
       </div>
       <div class="fade">
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2rem;text-align:center">
-          <div style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem">Today's Overview</div>
-          <div style="font-family:'Syne',sans-serif;font-size:3.5rem;font-weight:800;background:linear-gradient(135deg,#4A8FE7,#3DBFA0,#45C97C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.5rem">âˆ’0.62kg</div>
-          <div style="font-size:0.85rem;color:var(--muted);margin-bottom:2rem">real fat lost today</div>
-          <div style="background:rgba(0,212,184,0.08);border:1px solid rgba(0,212,184,0.2);border-radius:12px;padding:1rem;font-size:0.82rem;color:var(--muted);line-height:1.6">Your scale says âˆ’0.80kg.<br><span style="color:var(--teal);font-weight:600">ViCatus shows you the truth.</span><br>0.62kg real fat + 0.18kg water.</div>
+        <div class="truth-box">
+          <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem">Today's Real Fat Lost</div>
+          <div class="truth-num">&minus;0.62 kg</div>
+          <div style="font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem">Your scale says &minus;0.80 kg.</div>
+          <div class="truth-note">ViCatus shows you the truth &mdash; 0.62 kg real fat lost + 0.18 kg water weight fluctuation. <span style="color:var(--teal);font-weight:600">Stop guessing. Start knowing.</span></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- NUTRITION TAB -->
+  <!-- NUTRITION -->
   <div class="tab-content" id="tab-nutrition">
-    <div class="nutrition-grid">
+    <div class="two-col">
       <div>
-        <p class="section-tag" style="text-align:left">AI Meal Planning</p>
-        <h2 class="section-title" style="text-align:left;margin-bottom:1rem">Track calories.<br>Hit your macros.</h2>
-        <p style="color:var(--muted);font-size:0.95rem;line-height:1.75;margin-bottom:1.5rem">Just describe what you ate. Our AI extracts every calorie, protein gram, and macro automatically.</p>
+        <p class="section-tag left">AI Meal Planning</p>
+        <h2 class="section-title left" style="margin-bottom:0.8rem">Track calories.<br>Hit your macros.</h2>
+        <p style="color:var(--muted);font-size:0.92rem;line-height:1.75;margin-bottom:1.5rem">Just describe what you ate in plain language. Our AI extracts every calorie, protein gram, and macro automatically &mdash; no barcode scanning needed.</p>
         <div class="macro-card">
           <div class="macro-title">Today's Macros</div>
-          <div class="macro-row"><span class="macro-name">Protein</span><div class="macro-bar-bg"><div class="macro-bar-fill" style="width:77%;background:#4A8FE7"></div></div><span class="macro-val">102g</span></div>
-          <div class="macro-row"><span class="macro-name">Carbs</span><div class="macro-bar-bg"><div class="macro-bar-fill" style="width:33%;background:#3DBFA0"></div></div><span class="macro-val">90g</span></div>
-          <div class="macro-row"><span class="macro-name">Fat</span><div class="macro-bar-bg"><div class="macro-bar-fill" style="width:100%;background:#45C97C"></div></div><span class="macro-val">74g</span></div>
+          <div class="macro-row"><span class="macro-name">Protein</span><div class="macro-bar-bg"><div class="macro-bar-fill" style="width:77%;background:#4A8FE7"></div></div><span class="macro-val">102 g</span></div>
+          <div class="macro-row"><span class="macro-name">Carbs</span><div class="macro-bar-bg"><div class="macro-bar-fill" style="width:33%;background:#3DBFA0"></div></div><span class="macro-val">90 g</span></div>
+          <div class="macro-row"><span class="macro-name">Fat</span><div class="macro-bar-bg"><div class="macro-bar-fill" style="width:100%;background:#45C97C"></div></div><span class="macro-val">74 g</span></div>
         </div>
       </div>
       <div>
-        <p style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">AI Generated Recipes</p>
-        <div class="ai-recipe fade"><div class="recipe-emoji">&#127831;</div><div><div class="recipe-name">Teriyaki Chicken with Broccoli</div><div class="recipe-cal">871 Cal &middot; 73g Protein</div></div></div>
-        <div class="ai-recipe fade fade-delay-1"><div class="recipe-emoji">&#129367;</div><div><div class="recipe-name">Quinoa Power Bowl with Avocado</div><div class="recipe-cal">620 Cal &middot; 28g Protein</div></div></div>
-        <div class="ai-recipe fade fade-delay-2"><div class="recipe-emoji">&#129385;</div><div><div class="recipe-name">Salmon with Sweet Potato</div><div class="recipe-cal">540 Cal &middot; 42g Protein</div></div></div>
+        <p style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">AI Generated Recipes</p>
+        <div class="ai-recipe fade"><div class="recipe-emoji">&#127831;</div><div><div class="recipe-name">Teriyaki Chicken with Broccoli</div><div class="recipe-cal">871 Cal &middot; 73 g Protein</div></div></div>
+        <div class="ai-recipe fade d1"><div class="recipe-emoji">&#129367;</div><div><div class="recipe-name">Quinoa Power Bowl with Avocado</div><div class="recipe-cal">620 Cal &middot; 28 g Protein</div></div></div>
+        <div class="ai-recipe fade d2"><div class="recipe-emoji">&#129385;</div><div><div class="recipe-name">Salmon with Sweet Potato</div><div class="recipe-cal">540 Cal &middot; 42 g Protein</div></div></div>
       </div>
     </div>
   </div>
 
-  <!-- FITNESS TAB -->
+  <!-- FITNESS -->
   <div class="tab-content" id="tab-fitness">
-    <div class="fitness-grid">
+    <div class="two-col">
       <div>
-        <p class="section-tag" style="text-align:left">AI Workout Logger</p>
-        <h2 class="section-title" style="text-align:left;margin-bottom:1rem">Just describe<br>your workout.</h2>
-        <p style="color:var(--muted);font-size:0.95rem;line-height:1.75;margin-bottom:1.5rem">No forms. No dropdowns. Type it like you'd say it and our AI logs every set, rep, and calorie burned.</p>
+        <p class="section-tag left">AI Workout Logger</p>
+        <h2 class="section-title left" style="margin-bottom:0.8rem">Just describe<br>your workout.</h2>
+        <p style="color:var(--muted);font-size:0.92rem;line-height:1.75;margin-bottom:1.5rem">No forms. No dropdowns. Type it in plain language and our AI logs every set, rep, weight, and calorie burned automatically.</p>
         <div class="ai-input-box">
-          <div class="ai-input-label">&#129302; AI understands this</div>
-          <div class="ai-input-text">"3 sets of 10 reps curling 10kg in each hand, then 5x5 squats at 100kg"</div>
+          <div class="ai-input-label">&#129302; AI understands natural language</div>
+          <div class="ai-input-text">"3 sets of 10 reps curling 10 kg in each hand, then 5x5 squats at 100 kg"</div>
           <div class="ai-chips">
-            <span class="chip">Biceps</span>
-            <span class="chip">3 sets</span>
-            <span class="chip">10 reps</span>
-            <span class="chip">20kg total</span>
-            <span class="chip">Legs</span>
-            <span class="chip">5Ã—5</span>
-            <span class="chip">100kg</span>
-            <span class="chip">~487 kcal</span>
+            <span class="chip">Biceps</span><span class="chip">3 sets</span><span class="chip">10 reps</span>
+            <span class="chip">20 kg total</span><span class="chip">Legs</span><span class="chip">5&times;5</span>
+            <span class="chip">100 kg</span><span class="chip">~487 kcal</span>
           </div>
         </div>
       </div>
       <div>
-        <p style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">Today's Workout Log</p>
-        <div class="workout-entry fade"><div><div class="workout-name">Dumbbell Curl</div><div class="workout-detail">3 Ã— 10 @ 20kg total</div></div><div class="workout-cal">~87 kcal</div></div>
-        <div class="workout-entry fade fade-delay-1"><div><div class="workout-name">Barbell Squat</div><div class="workout-detail">5 Ã— 5 @ 100kg</div></div><div class="workout-cal">~312 kcal</div></div>
-        <div class="workout-entry fade fade-delay-2"><div><div class="workout-name">Bench Press</div><div class="workout-detail">4 Ã— 8 @ 80kg</div></div><div class="workout-cal">~214 kcal</div></div>
-        <div style="border-top:1px solid var(--border);padding-top:1rem;margin-top:0.5rem;display:flex;justify-content:space-between">
-          <span style="font-size:0.82rem;color:var(--muted)">Total gym calories</span>
+        <p style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">Today's Workout Log</p>
+        <div class="workout-entry fade"><div><div class="workout-name">Dumbbell Curl</div><div class="workout-detail">3 &times; 10 @ 20 kg total</div></div><div class="workout-cal">~87 kcal</div></div>
+        <div class="workout-entry fade d1"><div><div class="workout-name">Barbell Squat</div><div class="workout-detail">5 &times; 5 @ 100 kg</div></div><div class="workout-cal">~312 kcal</div></div>
+        <div class="workout-entry fade d2"><div><div class="workout-name">Bench Press</div><div class="workout-detail">4 &times; 8 @ 80 kg</div></div><div class="workout-cal">~214 kcal</div></div>
+        <div style="border-top:1px solid var(--border);padding-top:0.9rem;margin-top:0.4rem;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:0.8rem;color:var(--muted)">Total gym calories today</span>
           <span style="font-size:1rem;font-weight:600;color:var(--teal)">~613 kcal</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MARKET TAB -->
+  <!-- MARKET -->
   <div class="tab-content" id="tab-market">
     <div class="market-hero fade">
-      <h3>&#128722; Your Health Marketplace</h3>
-      <p>Shop thousands of health and fitness products from Amazon, Walmart, Target and more â€” without leaving the app.</p>
+      <h3>Your Health Marketplace</h3>
+      <p>Shop thousands of health and fitness products from Amazon, Walmart, Target and more &mdash; without leaving the app.</p>
     </div>
     <div class="market-products">
-      <div class="product-card fade"><div class="product-emoji">&#128138;</div><div class="product-brand">NightOwl Labs Â· Amazon</div><div class="product-name">Magnesium Glycinate 400mg</div><div class="product-price">$24.00</div></div>
-      <div class="product-card fade fade-delay-1"><div class="product-emoji">&#129338;</div><div class="product-brand">Zengrove Â· Walmart</div><div class="product-name">Premium Yoga Mat 6mm</div><div class="product-price">$79.00</div></div>
-      <div class="product-card fade fade-delay-2"><div class="product-emoji">&#127947;</div><div class="product-brand">VitaCore Â· Target</div><div class="product-name">Whey Protein 5lb</div><div class="product-price">$54.00</div></div>
-      <div class="product-card fade fade-delay-3"><div class="product-emoji">&#129488;</div><div class="product-brand">FlexBand Â· Amazon</div><div class="product-name">Resistance Bands Set</div><div class="product-price">$32.00</div></div>
+      <div class="product-card fade"><div class="product-emoji">&#128138;</div><div class="product-brand">NightOwl Labs &middot; Amazon</div><div class="product-name">Magnesium Glycinate 400 mg</div><div class="product-price">$24.00</div></div>
+      <div class="product-card fade d1"><div class="product-emoji">&#129338;</div><div class="product-brand">Zengrove &middot; Walmart</div><div class="product-name">Premium Yoga Mat 6 mm</div><div class="product-price">$79.00</div></div>
+      <div class="product-card fade d2"><div class="product-emoji">&#127947;</div><div class="product-brand">VitaCore &middot; Target</div><div class="product-name">Whey Protein 5 lb</div><div class="product-price">$54.00</div></div>
+      <div class="product-card fade d3"><div class="product-emoji">&#129488;</div><div class="product-brand">FlexBand &middot; Amazon</div><div class="product-name">Resistance Bands Set</div><div class="product-price">$32.00</div></div>
     </div>
     <div class="retailers-strip">
       <span class="retailer-name">Amazon</span>
@@ -553,48 +452,48 @@ footer p{font-size:0.75rem;color:var(--muted)}
   </div>
 </section>
 
-<!-- â”€â”€ FEATURES â”€â”€ -->
-<section class="features-section" id="features">
-  <div class="features-inner">
+<!-- FEATURES — full screen -->
+<section class="fullscreen features-section" id="features">
+  <div class="fullscreen-inner">
     <p class="section-tag fade">Features</p>
     <h2 class="section-title fade">Five pillars. One dashboard.</h2>
     <p class="section-sub fade">ViCatus connects every part of your health so you never juggle apps again.</p>
     <div class="features-grid">
       <div class="feat fade"><span class="feat-icon">&#128095;</span><h3>Step Tracking</h3><p>Every step counted automatically. Feeds directly into your daily calorie burn in real time.</p></div>
-      <div class="feat fade fade-delay-1"><span class="feat-icon">&#128293;</span><h3>Calorie Science</h3><p>Scientific calculation based on your body, activity, and goals. Tells you exactly what to eat and burn every day.</p></div>
-      <div class="feat fade fade-delay-2"><span class="feat-icon">&#129302;</span><h3>AI Meal Planning</h3><p>Describe what you ate â€” ViCatus extracts every calorie, protein, and macro. No barcode scanning.</p></div>
+      <div class="feat fade d1"><span class="feat-icon">&#128293;</span><h3>Calorie Science</h3><p>Scientific calculation based on your body, activity, and goals. Tells you exactly what to eat and burn every day.</p></div>
+      <div class="feat fade d2"><span class="feat-icon">&#129302;</span><h3>AI Meal Planning</h3><p>Describe what you ate &mdash; ViCatus extracts every calorie, protein, and macro. No barcode scanning.</p></div>
       <div class="feat fade"><span class="feat-icon">&#127947;</span><h3>AI Workout Logger</h3><p>Type your workout in plain language. AI parses every set, rep, and weight and calculates calories burned.</p></div>
-      <div class="feat fade fade-delay-1"><span class="feat-icon">&#128722;</span><h3>Health Marketplace</h3><p>Shop health and fitness products from Amazon, Walmart, Target and more without ever leaving the app.</p></div>
-      <div class="feat fade fade-delay-2"><span class="feat-icon">&#128202;</span><h3>Live Dashboard</h3><p>One glance. All your numbers. Calories in, out, steps, real fat lost â€” updated every minute.</p></div>
+      <div class="feat fade d1"><span class="feat-icon">&#128722;</span><h3>Health Marketplace</h3><p>Shop health and fitness products from Amazon, Walmart, Target and more without ever leaving the app.</p></div>
+      <div class="feat fade d2"><span class="feat-icon">&#128202;</span><h3>Live Dashboard</h3><p>One glance. All your numbers. Calories in, out, steps, real fat lost &mdash; updated every minute.</p></div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ HOW IT WORKS â”€â”€ -->
-<section class="how-section" id="how">
-  <div class="how-inner">
-    <p class="section-tag fade" style="text-align:center">How It Works</p>
+<!-- HOW IT WORKS — full screen -->
+<section class="fullscreen how-section" id="how">
+  <div class="fullscreen-inner">
+    <p class="section-tag fade">How It Works</p>
     <h2 class="section-title fade">Three steps. Then just watch.</h2>
     <p class="section-sub fade">ViCatus runs the numbers. You commit to them.</p>
     <div class="steps">
       <div class="step fade"><div class="step-num">1</div><h3>Create Your Profile</h3><p>Sign up and answer a few quick questions. Takes less than two minutes. No credit card needed.</p></div>
-      <div class="step fade fade-delay-1"><div class="step-num">2</div><h3>Set Your Goal Weight</h3><p>Input your current and desired weight. ViCatus scientifically calculates your precise daily calorie targets and timeline.</p></div>
-      <div class="step fade fade-delay-2"><div class="step-num">3</div><h3>Watch the Numbers Move</h3><p>Log meals, move your body, check your dashboard. Every hour. Every day. Until you hit your goal.</p></div>
+      <div class="step fade d1"><div class="step-num">2</div><h3>Set Your Goal Weight</h3><p>Input your current and desired weight. ViCatus scientifically calculates your precise daily calorie targets and timeline.</p></div>
+      <div class="step fade d2"><div class="step-num">3</div><h3>Watch the Numbers Move</h3><p>Log meals, move your body, check your dashboard. Every hour. Every day. Until you hit your goal.</p></div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ QUOTE â”€â”€ -->
-<section class="quote-section">
+<!-- QUOTE — full screen -->
+<section class="fullscreen quote-section">
   <div class="quote-inner">
     <span class="quote-mark fade">"</span>
     <blockquote class="fade">"You tried willpower.<br><span>ViCatus gives you intelligence."</span></blockquote>
-    <cite class="fade">Latin for Victory of Body and Habit â€” mastering your daily health routine to achieve peak physical performance.</cite>
+    <cite class="fade">Latin for Victory of Body and Habit &mdash; mastering your daily health routine to achieve peak physical performance.</cite>
   </div>
 </section>
 
-<!-- â”€â”€ ADVERTISE â”€â”€ -->
-<section class="advertise-section" id="advertise">
+<!-- ADVERTISE — full screen -->
+<section class="fullscreen advertise-section" id="advertise">
   <div class="advertise-inner fade">
     <h3>Advertise with ViCatus</h3>
     <p>Reach thousands of health-focused users actively shopping for fitness products, supplements, and wellness gear. Feature your brand directly inside the ViCatus app and on this website.</p>
@@ -602,12 +501,12 @@ footer p{font-size:0.75rem;color:var(--muted)}
   </div>
 </section>
 
-<!-- â”€â”€ CONTACT MODAL â”€â”€ -->
+<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">&times;</button>
     <h3>Advertise with ViCatus</h3>
-    <p>Tell us about your brand and we'll be in touch within 48 hours.</p>
+    <p>Tell us about your brand and we will be in touch within 48 hours.</p>
     <div id="contactForm">
       <div class="form-group"><label>Your Name</label><input type="text" id="fname" placeholder="Jane Smith"/></div>
       <div class="form-group"><label>Email Address</label><input type="email" id="femail" placeholder="jane@yourbrand.com"/></div>
@@ -626,12 +525,12 @@ footer p{font-size:0.75rem;color:var(--muted)}
       <div class="form-group"><label>Message (optional)</label><textarea id="fmessage" placeholder="Tell us about your product and advertising goals..."></textarea></div>
       <button class="form-submit" onclick="submitForm()">Send Enquiry &rarr;</button>
     </div>
-    <div class="form-success" id="formSuccess"><p>&#10003; Thank you! We'll be in touch within 48 hours.</p></div>
+    <div class="form-success" id="formSuccess"><p>&#10003; Thank you! We will be in touch within 48 hours.</p></div>
   </div>
 </div>
 
-<!-- â”€â”€ FINAL CTA â”€â”€ -->
-<section class="cta-section">
+<!-- CTA — full screen -->
+<section class="fullscreen cta-section">
   <div class="cta-inner">
     <p class="section-tag fade">Get Started Free</p>
     <h2 class="cta-title fade">Your goal weight<br>is <span>waiting.</span></h2>
@@ -639,7 +538,7 @@ footer p{font-size:0.75rem;color:var(--muted)}
     <div class="dl-stack fade" style="margin:0 auto">
       <a href="YOUR_APP_STORE_LINK_HERE" class="dl-btn dl-apple" target="_blank" rel="noopener">
         <div class="dl-left">
-          <div class="dl-icon"><i class="fa-brands fa-apple" style="font-size:28px;color:#ffffff;line-height:1;"></i></div>
+          <div class="dl-icon"><i class="fa-brands fa-apple"></i></div>
           <div class="dl-text"><span class="dl-small">Download on the</span><span class="dl-big">App Store</span></div>
         </div>
         <span class="dl-arrow">&#8594;</span>
@@ -652,14 +551,14 @@ footer p{font-size:0.75rem;color:var(--muted)}
         <span class="dl-arrow">&#8594;</span>
       </a>
     </div>
-    <p class="free fade" style="margin-top:1.2rem">Free to Download</p>
+    <p class="free fade" style="margin-top:1rem">Free to Download</p>
   </div>
 </section>
 
-<!-- â”€â”€ FOOTER â”€â”€ -->
+<!-- FOOTER -->
 <footer>
   <a href="#home" class="nav-logo">
-    <img src="vicatus-logo.png" alt="ViCatus" style="width:34px;height:34px;border-radius:50%"/>
+    <img src="vicatus-logo.PNG" alt="ViCatus" style="width:34px;height:34px;border-radius:50%"/>
     <span class="nav-brand"><span class="nav-vi">Vi</span><span class="nav-catus">Catus</span></span>
   </a>
   <p>&copy; 2026 ViCatus. All rights reserved.</p>
@@ -667,39 +566,33 @@ footer p{font-size:0.75rem;color:var(--muted)}
     <li><a href="privacy.html">Privacy Policy</a></li>
     <li><a href="terms.html">Terms of Use</a></li>
     <li><a href="mailto:hello@vicatus.com">Contact</a></li>
-    <li><a href="#advertise" class="advertise-link" onclick="openModal(event)">Advertise with us</a></li>
+    <li><a href="#advertise" class="foot-advert" onclick="openModal(event)">Advertise with us</a></li>
   </ul>
 </footer>
 
 <script>
 // Particles
 (function(){
-  const container = document.getElementById('particles');
-  const colors = ['rgba(0,212,184,', 'rgba(74,143,231,', 'rgba(69,201,124,'];
-  for(let i=0;i<25;i++){
-    const p = document.createElement('div');
-    p.className = 'particle';
-    const size = Math.random()*4+2;
-    const color = colors[Math.floor(Math.random()*colors.length)];
-    p.style.cssText = `
-      width:${size}px;height:${size}px;
-      left:${Math.random()*100}%;
-      background:${color}${Math.random()*0.6+0.2});
-      animation-duration:${Math.random()*15+10}s;
-      animation-delay:${Math.random()*10}s
-    `;
-    container.appendChild(p);
+  const c=document.getElementById('particles');
+  const cols=['rgba(0,212,184,','rgba(74,143,231,','rgba(69,201,124,'];
+  for(let i=0;i<20;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    const s=Math.random()*4+2;
+    const col=cols[Math.floor(Math.random()*cols.length)];
+    p.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;background:${col}${Math.random()*0.5+0.2});animation-duration:${Math.random()*14+10}s;animation-delay:${Math.random()*8}s`;
+    c.appendChild(p);
   }
 })();
 
 // Nav scroll
 window.addEventListener('scroll',()=>{
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
 });
 
-// Scroll fade
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(el=>{ if(el.isIntersecting) el.target.classList.add('show') });
+// Fade on scroll
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
 },{threshold:0.1});
 document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
 
@@ -707,38 +600,8 @@ document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
 function toggleMenu(){
   document.getElementById('hamburger').classList.toggle('open');
   document.getElementById('mobileMenu').classList.toggle('open');
-  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
+  document.body.style.overflow=document.getElementById('mobileMenu').classList.contains('open')?'hidden':'';
 }
-
-// Tabs
-function switchTab(name, btn){
-  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('tab-'+name).classList.add('active');
-  btn.classList.add('active');
-  // re-trigger fade animations in new tab
-  document.querySelectorAll('#tab-'+name+' .fade').forEach(el=>{
-    el.classList.remove('show');
-    setTimeout(()=>el.classList.add('show'),50);
-  });
-}
-
-// Modal
-function openModal(e){ if(e)e.preventDefault(); document.getElementById('modalOverlay').classList.add('open'); document.body.style.overflow='hidden'; }
-function closeModal(){ document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow=''; }
-function closeModalOutside(e){ if(e.target===document.getElementById('modalOverlay')) closeModal(); }
-
-// Form
-function submitForm(){
-  const name=document.getElementById('fname').value.trim();
-  const email=document.getElementById('femail').value.trim();
-  const brand=document.getElementById('fbrand').value.trim();
-  if(!name||!email||!brand){ alert('Please fill in your name, email, and brand name.'); return; }
-  document.getElementById('contactForm').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
-}
-
-// Close mobile menu on link click
 document.querySelectorAll('.mobile-menu a').forEach(a=>{
   a.addEventListener('click',()=>{
     document.getElementById('hamburger').classList.remove('open');
@@ -746,6 +609,33 @@ document.querySelectorAll('.mobile-menu a').forEach(a=>{
     document.body.style.overflow='';
   });
 });
+
+// Tabs
+function switchTab(name,btn){
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  btn.classList.add('active');
+  document.querySelectorAll('#tab-'+name+' .fade').forEach(el=>{
+    el.classList.remove('show');
+    setTimeout(()=>el.classList.add('show'),60);
+  });
+}
+
+// Modal
+function openModal(e){if(e)e.preventDefault();document.getElementById('modalOverlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow='';}
+function closeModalOutside(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
+
+// Form
+function submitForm(){
+  const name=document.getElementById('fname').value.trim();
+  const email=document.getElementById('femail').value.trim();
+  const brand=document.getElementById('fbrand').value.trim();
+  if(!name||!email||!brand){alert('Please fill in your name, email, and brand name.');return;}
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
 </script>
 </body>
 </html>
