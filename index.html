@@ -66,8 +66,10 @@
   .nav-logo {
     display: flex; align-items: center; gap: 8px;
     font-family: var(--font-display); font-weight: 800; font-size: var(--t-lg);
-    color: var(--text); text-decoration: none;
+    text-decoration: none;
   }
+  .nav-vi { color: #ffffff; }
+  .nav-catus { background: linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .nav-logo img { height: 26px; width: 26px; border-radius: 50%; box-shadow: 0 0 16px rgba(0,212,184,0.6); }
   .nav-links { display: flex; gap: 24px; list-style: none; }
   .nav-links a {
@@ -109,13 +111,24 @@
   .hero-badge span { width: 6px; height: 6px; background: var(--green); border-radius: 50%; display: inline-block; animation: pulse 1.8s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
 
+  .hero-title-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; margin-bottom: 8px;
+  }
+  .hero-logo {
+    height: clamp(40px, 7vw, 64px);
+    width: clamp(40px, 7vw, 64px);
+    border-radius: 50%;
+    box-shadow: 0 0 24px rgba(0,212,184,0.5);
+    flex-shrink: 0;
+  }
   .hero-title {
     font-family: var(--font-display);
     font-size: var(--t-hero);
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    margin-bottom: 8px;
+    margin-bottom: 0;
   }
   .hero-vi { color: #ffffff; -webkit-text-fill-color: #ffffff; }
   .hero-catus { background: linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -344,7 +357,15 @@
   /* â”€â”€ HOW IT WORKS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   #how { background: var(--surface); }
 
-  .steps-list { display: flex; flex-direction: column; gap: 12px; max-width: 560px; }
+  .how-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+  }
+  .steps-list { display: flex; flex-direction: column; gap: 12px; }
   .step-item {
     display: flex; align-items: flex-start; gap: 16px;
   }
@@ -363,8 +384,11 @@
   .quote-block {
     background: var(--card); border-left: 3px solid var(--accent);
     border-radius: 0 10px 10px 0;
-    padding: 14px 20px; margin-top: 28px; max-width: 420px;
+    padding: 24px 28px; margin-top: 0;
     font-size: var(--t-sm); color: var(--muted); font-style: italic;
+    align-self: center;
+    width: 280px;
+    flex-shrink: 0;
   }
   .quote-block strong { color: var(--text); font-style: normal; }
 
@@ -462,6 +486,8 @@
     section { padding: calc(var(--nav-h) + 12px) 20px 24px; }
     nav { padding: 0 20px; }
     .nav-links { display: none; }
+    .how-inner { grid-template-columns: 1fr; gap: 20px; }
+    .quote-block { margin-top: 4px; width: 100%; }
     .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .product-grid { grid-template-columns: 1fr; }
@@ -478,7 +504,7 @@
 <nav>
   <a href="#hero" class="nav-logo">
     <img src="https://vicatus.com/vicatus-logo.png" alt="ViCatus" />
-    ViCatus
+    <span class="nav-vi">Vi</span><span class="nav-catus">Catus</span>
   </a>
   <ul class="nav-links">
     <li><a href="#dashboard">Dashboard</a></li>
@@ -491,7 +517,10 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-badge"><span></span> Now live on iOS & Android</div>
-  <h1 class="hero-title"><span class="hero-vi">Vi</span><span class="hero-catus">Catus</span></h1>
+  <div class="hero-title-row">
+    <img src="https://vicatus.com/vicatus-logo.png" alt="ViCatus logo" class="hero-logo" />
+    <h1 class="hero-title"><span class="hero-vi">Vi</span><span class="hero-catus">Catus</span></h1>
+  </div>
   <p class="hero-sub">Track &middot; Eat Smart &middot; Shop &middot; Reach Your Goal</p>
   <p class="hero-tagline">You tried willpower.<br>Now try Intelligence.</p>
   <div class="hero-pills">
@@ -755,6 +784,7 @@
   <h2 class="section-title">Three steps.<br>Then just watch.</h2>
   <p style="font-size:var(--t-sm);color:var(--muted);margin-bottom:22px;">ViCatus runs the numbers. You commit to them.</p>
 
+  <div class="how-inner">
   <div class="steps-list">
     <div class="step-item">
       <div class="step-num">1</div>
@@ -778,10 +808,10 @@
       </div>
     </div>
   </div>
-
   <div class="quote-block">
     <strong>"You tried willpower.<br>ViCatus gives you intelligence."</strong><br><br>
     Latin for <em>Victory of Body and Habit</em> &mdash; mastering your daily health routine to achieve peak physical performance.
+  </div>
   </div>
 </section>
 
