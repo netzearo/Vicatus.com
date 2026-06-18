@@ -497,130 +497,98 @@
     .macros-row { grid-template-columns: repeat(3, 1fr); }
   }
 
-  /* â”€â”€ COMMERCIAL VIDEO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-  #commercial {
-    background: #000;
-    min-height: auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+  
+  
   }
-  .video-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 420px;
-    margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 80px rgba(0,212,184,0.25), 0 40px 80px rgba(0,0,0,0.6);
-  }
-  .video-wrapper video {
-    width: 100%;
-    display: block;
-    border-radius: 20px;
-  }
-  .video-play-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.35);
-    cursor: pointer;
-    border-radius: 20px;
-    transition: opacity .3s;
-  }
-  .video-play-overlay:hover { opacity: .85; }
-  .play-btn {
-    width: 70px; height: 70px;
-    background: rgba(0,212,184,0.9);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 40px rgba(0,212,184,0.6);
-  }
-  .play-btn svg { width: 28px; height: 28px; fill: #060c12; margin-left: 4px; }
-  .video-caption {
-    text-align: center;
-    padding: 20px 20px 40px;
-    font-size: var(--t-xs);
-    color: var(--dim);
-  }
+
 
   /* â”€â”€ REAL RESULTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-  #results { background: var(--bg); }
-
-  .results-headline {
+  #results {
+    background: var(--bg);
+  }
+  .results-intro {
+    max-width: 560px;
+    margin-bottom: 28px;
+  }
+  .results-intro .section-title { margin-bottom: 8px; }
+  .results-intro p {
+    font-size: var(--t-sm); color: var(--muted); line-height: 1.6;
+  }
+  .results-main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: center;
+    width: 100%;
+  }
+  .results-big-stat {
+    background: var(--card);
+    border: 1px solid rgba(0,212,184,0.25);
+    border-radius: 20px;
+    padding: 28px 32px;
+    text-align: center;
+    flex-shrink: 0;
+    min-width: 200px;
+  }
+  .rbs-label {
+    font-size: var(--t-xs); color: var(--muted);
+    text-transform: uppercase; letter-spacing: .1em;
+    font-weight: 600; margin-bottom: 10px;
+  }
+  .rbs-number {
     font-family: var(--font-display);
-    font-size: var(--t-2xl); font-weight: 800;
-    letter-spacing: -0.02em; line-height: 1.1;
+    font-size: 3.8rem; font-weight: 800; line-height: 1;
+    background: linear-gradient(135deg, #00d4b8, #22c55e);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 6px;
   }
-  .results-headline span {
-    background: linear-gradient(90deg,#00d4b8,#22c55e);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .rbs-unit {
+    font-size: var(--t-sm); color: var(--muted);
+    margin-bottom: 16px;
   }
-  .results-sub {
-    font-size: var(--t-sm); color: var(--muted); margin-bottom: 24px;
+  .rbs-timeframe {
+    font-size: var(--t-xs); color: var(--dim);
+    background: var(--surface);
+    border-radius: 20px; padding: 4px 12px;
+    display: inline-block;
   }
-  .results-grid {
+  .results-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
+    gap: 10px;
   }
-  .result-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 16px; overflow: hidden;
+  .rs-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
   }
-  .result-card img {
-    width: 100%; display: block;
-    border-radius: 16px;
+  .rs-card .rsc-label {
+    font-size: var(--t-xs); color: var(--muted); margin-bottom: 6px;
   }
-  .result-stat-card {
-    background: var(--card); border: 1px solid rgba(0,212,184,0.2);
-    border-radius: 16px; padding: 20px;
-    display: flex; flex-direction: column; gap: 12px;
-    justify-content: center;
-  }
-  .rst-headline {
-    font-size: var(--t-xs); color: var(--muted);
-    text-transform: uppercase; letter-spacing: .08em; font-weight: 600;
-  }
-  .rst-big {
+  .rs-card .rsc-val {
     font-family: var(--font-display);
-    font-size: var(--t-3xl); font-weight: 800;
-    background: linear-gradient(90deg,#00d4b8,#22c55e);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
+    font-size: var(--t-xl); font-weight: 700; color: var(--text);
   }
-  .rst-label {
+  .rs-card .rsc-val.positive { color: var(--green); }
+  .rs-card .rsc-note {
+    font-size: var(--t-xs); color: var(--dim); margin-top: 3px;
+  }
+  .results-footer {
+    margin-top: 20px;
+    padding: 14px 20px;
+    background: rgba(0,212,184,0.06);
+    border: 1px solid rgba(0,212,184,0.15);
+    border-radius: 12px;
     font-size: var(--t-xs); color: var(--muted);
-    line-height: 1.5;
+    text-align: center; line-height: 1.6;
   }
-  .rst-row {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: var(--t-sm);
-  }
-  .rst-row:last-child { border-bottom: none; }
-  .rst-row .rst-key { color: var(--muted); }
-  .rst-row .rst-val { font-weight: 700; color: var(--text); }
-  .rst-row .rst-val.green { color: var(--green); }
-  .result-disclaimer {
-    grid-column: 1 / -1;
-    font-size: var(--t-xs); color: var(--dim);
-    text-align: center; padding-top: 4px;
-  }
+  .results-footer strong { color: var(--accent); }
   @media (max-width: 768px) {
-    .results-grid { grid-template-columns: 1fr; }
-    .video-wrapper { border-radius: 12px; }
+    .results-main { grid-template-columns: 1fr; }
+    .results-stats { grid-template-columns: 1fr 1fr; }
+    .results-big-stat { min-width: unset; }
   }
 
 </style>
@@ -670,22 +638,6 @@
   <p class="free-note">Free to Download</p>
 </section>
 
-
-<!-- COMMERCIAL -->
-<section id="commercial">
-  <div class="video-wrapper" id="videoWrapper">
-    <video id="vicatusVideo" playsinline preload="metadata"
-      poster="https://vicatus.com/vicatus-logo.png">
-      <source src="https://raw.githubusercontent.com/vicatus/Vicatus.com/main/VC-ad.mp4" type="video/mp4" />
-    </video>
-    <div class="video-play-overlay" id="playOverlay" onclick="playVideo()">
-      <div class="play-btn">
-        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-      </div>
-    </div>
-  </div>
-  <p class="video-caption">&#x1F50A; Tap to watch with sound &mdash; 20 seconds</p>
-</section>
 
 <!-- LIVE DASHBOARD -->
 <section id="dashboard">
@@ -885,7 +837,7 @@
 <!-- FEATURES -->
 <section id="features">
   <p class="section-label">Features</p>
-  <h2 class="section-title">Five pillars.<br>One dashboard.</h2>
+  <h2 class="section-title">Six pillars.<br>One dashboard.</h2>
   <p style="font-size:var(--t-sm);color:var(--muted);margin-bottom:18px;">ViCatus connects every part of your health so you never juggle apps again.</p>
 
   <div class="features-grid">
@@ -971,55 +923,62 @@
 </section>
 
 
+
 <!-- REAL RESULTS -->
 <section id="results">
-  <p class="section-label">Real Results</p>
-  <h2 class="results-headline">Real person.<br><span>Real data. Real loss.</span></h2>
-  <p class="results-sub">No stock photos. No fake before/afters. This is actual ViCatus data from a real user &mdash; tracked live inside the app.</p>
+  <div class="results-intro">
+    <p class="section-label">Real Results</p>
+    <h2 class="section-title">Real person.<br>Real data.</h2>
+    <p>No testimonials were written for this. These are live numbers pulled directly from the ViCatus app &mdash; tracked by a real user over 4 weeks.</p>
+  </div>
 
-  <div class="results-grid">
+  <div class="results-main">
 
-    <div class="result-stat-card">
-      <div class="rst-headline">4 weeks with ViCatus</div>
-      <div class="rst-big">&minus;3.4kg</div>
-      <div class="rst-label">Real fat lost since May 25, 2026</div>
-      <div class="rst-row">
-        <span class="rst-key">Starting weight</span>
-        <span class="rst-val">78.5 kg</span>
+    <div class="results-big-stat">
+      <div class="rbs-label">Total lost</div>
+      <div class="rbs-number">&minus;3.4</div>
+      <div class="rbs-unit">kilograms of real fat</div>
+      <div class="rbs-timeframe">May 25 &mdash; Jun 22, 2026</div>
+    </div>
+
+    <div class="results-stats">
+      <div class="rs-card">
+        <div class="rsc-label">Starting weight</div>
+        <div class="rsc-val">78.5 kg</div>
+        <div class="rsc-note">Day one</div>
       </div>
-      <div class="rst-row">
-        <span class="rst-key">Current scale</span>
-        <span class="rst-val green">75.1 kg</span>
+      <div class="rs-card">
+        <div class="rsc-label">Current weight</div>
+        <div class="rsc-val positive">75.1 kg</div>
+        <div class="rsc-note">Scale today</div>
       </div>
-      <div class="rst-row">
-        <span class="rst-key">Actual net weight</span>
-        <span class="rst-val green">74.8 kg</span>
+      <div class="rs-card">
+        <div class="rsc-label">Actual net weight</div>
+        <div class="rsc-val positive">74.8 kg</div>
+        <div class="rsc-note">ViCatus truth</div>
       </div>
-      <div class="rst-row">
-        <span class="rst-key">Goal weight</span>
-        <span class="rst-val">76 kg &#x2713;</span>
+      <div class="rs-card">
+        <div class="rsc-label">Goal weight</div>
+        <div class="rsc-val positive">76 kg &#x2713;</div>
+        <div class="rsc-note">Already surpassed</div>
       </div>
-      <div class="rst-row">
-        <span class="rst-key">Weekly projected</span>
-        <span class="rst-val green">73.8 kg</span>
+      <div class="rs-card">
+        <div class="rsc-label">Weekly projected</div>
+        <div class="rsc-val positive">73.8 kg</div>
+        <div class="rsc-note">Still dropping</div>
       </div>
-      <div class="rst-row">
-        <span class="rst-key">Calorie deficit</span>
-        <span class="rst-val green">+526 today</span>
+      <div class="rs-card">
+        <div class="rsc-label">Calorie deficit</div>
+        <div class="rsc-val positive">+526</div>
+        <div class="rsc-note">Today&rsquo;s deficit</div>
       </div>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:16px;">
-      <div class="result-card">
-        <img src="https://vicatus.com/result-weight-summary.jpg" alt="ViCatus Weight Summary screenshot" />
-      </div>
-      <div class="result-card">
-        <img src="https://vicatus.com/result-weight-control.jpg" alt="ViCatus Weight Control screenshot" />
-      </div>
-    </div>
+  </div>
 
-    <p class="result-disclaimer">&#x2713; Goal already surpassed. Still losing. Data captured live from the ViCatus app.</p>
-
+  <div class="results-footer">
+    <strong>Goal already surpassed &mdash; and still losing.</strong><br>
+    ViCatus separates your real fat loss from water retention so you always know the truth &mdash; not just what the scale says.
   </div>
 </section>
 
@@ -1096,28 +1055,6 @@
   </div>
 </div>
 
-
-<script>
-  function playVideo() {
-    const video = document.getElementById('vicatusVideo');
-    const overlay = document.getElementById('playOverlay');
-    video.muted = false;
-    video.play();
-    overlay.style.display = 'none';
-    video.controls = true;
-  }
-  // Show overlay again if video ends
-  document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('vicatusVideo');
-    if (video) {
-      video.addEventListener('ended', function() {
-        const overlay = document.getElementById('playOverlay');
-        overlay.style.display = 'flex';
-        video.controls = false;
-      });
-    }
-  });
-</script>
 
 </body>
 </html>
