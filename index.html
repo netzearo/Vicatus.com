@@ -72,7 +72,7 @@
   .nav-vi { color: #ffffff; font-size: var(--t-lg); letter-spacing: 0; }
   .nav-catus-text { font-size: var(--t-lg); letter-spacing: 0; }
   .nav-catus { background: linear-gradient(90deg,#4A8FE7,#3DBFA0,#45C97C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .nav-logo img { height: 28px; width: 28px; border-radius: 0; box-shadow: 0 0 16px rgba(0,212,184,0.5); }
+  .nav-logo img { height: 28px; width: auto; border-radius: 0; box-shadow: none; background: none; display: block; }
   .nav-links { display: flex; gap: 24px; list-style: none; }
   .nav-links a {
     color: var(--muted); font-size: var(--t-sm); font-weight: 500;
@@ -119,9 +119,11 @@
   }
   .hero-logo {
     height: clamp(40px, 7vw, 64px);
-    width: clamp(40px, 7vw, 64px);
+    width: auto;
     border-radius: 0;
-    box-shadow: 0 0 24px rgba(0,212,184,0.5);
+    box-shadow: none;
+    background: none;
+    display: block;
     flex-shrink: 0;
   }
   .hero-title {
@@ -335,9 +337,10 @@
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
     border-radius: 12px; padding: 14px;
   }
-  .pc-icon { font-size: 1.4rem; margin-bottom: 8px; }
+  .pc-name-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .pc-icon { font-size: 1.4rem; flex-shrink: 0; }
   .pc-brand { font-size: var(--t-xs); color: var(--dim); margin-bottom: 2px; }
-  .pc-name { font-size: var(--t-sm); font-weight: 600; margin-bottom: 6px; }
+  .pc-name { font-size: var(--t-sm); font-weight: 600; margin-bottom: 0; }
   .pc-footer { display: flex; align-items: center; justify-content: space-between; }
   .pc-price { font-family: var(--font-display); font-size: var(--t-lg); font-weight: 700; color: var(--accent); }
   .pc-store { font-size: var(--t-xs); color: var(--dim); }
@@ -436,7 +439,7 @@
     display: flex; align-items: center; gap: 8px;
     font-family: var(--font-display); font-weight: 700; font-size: var(--t-md);
   }
-  .footer-brand img { height: 22px; width: 22px; border-radius: 0; }
+  .footer-brand img { height: 22px; width: auto; border-radius: 0; background: none; display: block; }
   .footer-links { display: flex; gap: 20px; list-style: none; }
   .footer-links a { color: var(--muted); font-size: var(--t-xs); text-decoration: none; }
   .footer-links a:hover { color: var(--text); }
@@ -484,20 +487,7 @@
   .btn-full:hover { opacity: .88; }
 
   /* â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-  @media (max-width: 768px) {
-    section { padding: calc(var(--nav-h) + 12px) 20px 24px; }
-    nav { padding: 0 20px; }
-    .nav-links { display: none; }
-    .how-inner { grid-template-columns: 1fr; gap: 20px; }
-    .quote-block { margin-top: 4px; width: 100%; }
-    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
-    .features-grid { grid-template-columns: repeat(2, 1fr); }
-    .product-grid { grid-template-columns: 1fr; }
-    .adv-inner { flex-direction: column; }
-    footer { flex-direction: column; text-align: center; }
-    .fat-loss-card { flex-direction: column; gap: 10px; }
-    .macros-row { grid-template-columns: repeat(3, 1fr); }
-  }
+
 
   
   
@@ -587,12 +577,183 @@
     text-align: center; line-height: 1.6;
   }
   .results-footer strong { color: var(--accent); }
-  @media (max-width: 768px) {
-    .results-main { grid-template-columns: 1fr; }
-    .results-stats { grid-template-columns: 1fr 1fr; }
-    .results-big-stat { min-width: unset; }
-  }
 
+
+
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+
+    /* â”€â”€ HERO â”€â”€ centered, bigger tagline, logo row centered */
+    #hero {
+      padding: calc(var(--nav-h) + 24px) 24px 40px;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-title-row {
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .hero-logo { height: 48px; width: 48px; }
+    .hero-title { font-size: 3.2rem; }
+    .hero-badge { font-size: 0.82rem; margin-bottom: 20px; }
+    .hero-sub { font-size: 1rem; margin-bottom: 8px; }
+    .hero-tagline { font-size: 2.15rem; margin-bottom: 24px; line-height: 1.2; }
+    .pill { font-size: 0.88rem; padding: 12px 22px; }
+    .hero-pills { margin-bottom: 24px; gap: 8px; justify-content: center; }
+    .hero-btns { flex-direction: row; gap: 10px; margin-bottom: 12px; justify-content: center; }
+    .btn-primary, .btn-secondary { flex: 1; padding: 12px 10px; align-items: center; }
+    .btn-primary .btn-main, .btn-secondary .btn-main { font-size: 1rem; }
+    .btn-primary .btn-sup, .btn-secondary .btn-sup { font-size: 0.65rem; }
+    .free-note { font-size: 0.78rem; }
+
+    /* â”€â”€ DASHBOARD â€” taller cards, fill the screen â”€â”€ */
+    #dashboard {
+      padding: calc(var(--nav-h) + 12px) 20px 20px;
+      min-height: 100vh;
+      justify-content: flex-start;
+    }
+    .dashboard-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .dash-card { padding: 12px 12px; }
+    .dash-card .dc-icon { font-size: 0.95rem; margin-bottom: 5px; }
+    .dash-card .dc-label { font-size: 0.65rem; margin-bottom: 3px; }
+    .dash-card .dc-value { font-size: 1.15rem; }
+    .dash-card .dc-sub { font-size: 0.62rem; margin-top: 2px; }
+    .dash-card .dc-bar { margin-top: 6px; height: 3px; }
+    .fat-loss-card { flex-direction: column; gap: 6px; padding: 14px 14px; }
+    .flc-val { font-size: 1.5rem; }
+    .flc-left .flc-label { font-size: 0.68rem; }
+    .flc-right .flc-truth { font-size: 0.72rem; }
+    .flc-right .flc-note { font-size: 0.62rem; }
+
+    /* â”€â”€ MEALS â€” taller macro cards, taller recipe rows â”€â”€ */
+    #meals {
+      padding: calc(var(--nav-h) + 20px) 20px 24px;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    .macros-row { grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
+    .macro-card { padding: 22px 8px; }
+    .mc-label { font-size: 0.75rem; margin-bottom: 8px; }
+    .mc-val { font-size: 1.6rem; }
+    .recipe-list { gap: 10px; }
+    .recipe-item { padding: 16px 14px; }
+    .ri-name { font-size: 0.9rem; }
+    .ri-cal { font-size: 0.75rem; margin-top: 3px; }
+
+    /* â”€â”€ WORKOUT â€” taller exercise rows â”€â”€ */
+    #workout {
+      padding: calc(var(--nav-h) + 20px) 20px 24px;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    .ai-input-demo { padding: 16px; margin-bottom: 14px; }
+    .ai-input-demo .ai-text { font-size: 0.82rem; line-height: 1.6; }
+    .workout-log { gap: 10px; }
+    .wo-item { padding: 16px 14px; }
+    .wo-name { font-size: 0.95rem; }
+    .wo-detail { font-size: 0.78rem; margin-top: 3px; }
+    .wo-kcal { font-size: 0.82rem; }
+    .wo-total { padding: 14px 16px; margin-top: 10px; font-size: 0.9rem; }
+
+    /* â”€â”€ MARKETPLACE â”€â”€ */
+    #marketplace {
+      padding: calc(var(--nav-h) + 8px) 20px 20px;
+      min-height: 100vh;
+      justify-content: flex-start;
+    }
+    .store-logos { gap: 8px; margin-bottom: 12px; }
+    .store-badge { font-size: 0.75rem; padding: 5px 10px; }
+    .product-grid { grid-template-columns: 1fr; gap: 10px; }
+    .product-card { padding: 14px; display: flex; flex-direction: column; gap: 6px; }
+    .pc-icon { font-size: 1.1rem; margin-bottom: 0; display: inline; margin-right: 6px; }
+    .pc-brand { font-size: 0.7rem; }
+    .pc-name { font-size: 0.9rem; display: inline; }
+    .pc-name-row { display: flex; align-items: center; gap: 0; }
+    .pc-price { font-size: 1.1rem; }
+
+    /* â”€â”€ FEATURES â”€â”€ */
+    #features {
+      padding: calc(var(--nav-h) + 20px) 20px 24px;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    .features-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .feat-card { padding: 16px 12px; }
+    .feat-icon { font-size: 1.2rem; margin-bottom: 6px; }
+    .feat-title { font-size: 0.85rem; margin-bottom: 4px; }
+    .feat-desc { font-size: 0.72rem; line-height: 1.5; }
+
+    /* â”€â”€ HOW IT WORKS â”€â”€ */
+    #how {
+      padding: calc(var(--nav-h) + 20px) 20px 24px;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    .how-inner { grid-template-columns: 1fr; gap: 20px; }
+    .quote-block { width: 100%; padding: 16px 18px; font-size: 0.82rem; }
+    .step-item { gap: 14px; margin-bottom: 4px; }
+    .step-title { font-size: 0.95rem; }
+    .step-desc { font-size: 0.8rem; line-height: 1.5; }
+
+    /* â”€â”€ REAL RESULTS â€” everything on one screen â”€â”€ */
+    #results {
+      padding: calc(var(--nav-h) + 16px) 20px 20px;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    .results-intro { margin-bottom: 12px; }
+    .results-intro .section-title { font-size: 1.4rem; margin-bottom: 4px; }
+    .results-intro p { font-size: 0.72rem; margin-bottom: 0; }
+    .results-main { grid-template-columns: 1fr; gap: 10px; }
+    .results-big-stat { padding: 12px 16px; min-width: unset; }
+    .rbs-label { font-size: 0.65rem; margin-bottom: 4px; }
+    .rbs-number { font-size: 2rem; }
+    .rbs-unit { font-size: 0.72rem; margin-bottom: 8px; }
+    .rbs-timeframe { font-size: 0.65rem; }
+    .results-stats { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .rs-card { padding: 10px 10px; }
+    .rs-card .rsc-label { font-size: 0.65rem; margin-bottom: 3px; }
+    .rs-card .rsc-val { font-size: 1rem; }
+    .rs-card .rsc-note { font-size: 0.62rem; }
+    .results-footer { font-size: 0.68rem; padding: 10px 12px; margin-top: 8px; }
+
+    /* â”€â”€ DOWNLOAD â€” its own full screen â”€â”€ */
+    #download {
+      padding: calc(var(--nav-h) + 20px) 24px 40px;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    #download .section-title { font-size: 2rem; margin-bottom: 10px; }
+    #download .hero-sub { font-size: 1rem; margin-bottom: 28px; }
+    #download .hero-btns { flex-direction: row; gap: 10px; }
+    #download .btn-primary,
+    #download .btn-secondary { flex: 1; padding: 12px 10px; align-items: center; }
+
+    /* â”€â”€ ADVERTISE â”€â”€ */
+    #advertise { min-height: unset; padding: 40px 20px; }
+    .adv-inner { flex-direction: column; gap: 16px; padding: 22px 18px; }
+
+    footer { flex-direction: column; text-align: center; gap: 10px; padding: 24px 20px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 14px; }
+  }
 </style>
 </head>
 <body>
@@ -600,7 +761,7 @@
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">
-    <img src="https://vicatus.com/vicatus-logo.png" alt="ViCatus" />
+    <img src="https://raw.githubusercontent.com/vicatus/Vicatus.com/main/vicatus-logo.png" alt="ViCatus" />
     <span class="nav-logo-text"><span class="nav-vi">Vi</span><span class="nav-catus nav-catus-text">Catus</span></span>
   </a>
   <ul class="nav-links">
@@ -615,7 +776,7 @@
 <section id="hero">
   <div class="hero-badge"><span></span> Now live on iOS & Android</div>
   <div class="hero-title-row">
-    <img src="https://vicatus.com/vicatus-logo.png" alt="ViCatus logo" class="hero-logo" />
+    <img src="https://raw.githubusercontent.com/vicatus/Vicatus.com/main/vicatus-logo.png" alt="ViCatus logo" class="hero-logo" />
     <h1 class="hero-title"><span class="hero-vi">Vi</span><span class="hero-catus">Catus</span></h1>
   </div>
   <p class="hero-sub">Track &middot; Eat Smart &middot; Shop &middot; Reach Your Goal</p>
@@ -674,6 +835,20 @@
       <div class="dc-value">77.5kg</div>
       <div class="dc-sub">&minus;1kg this week</div>
       <div class="dc-bar"><div class="dc-fill" style="width:40%;background:var(--blue)"></div></div>
+    </div>
+    <div class="dash-card">
+      <div class="dc-icon">&#x1F37D;</div>
+      <div class="dc-label">Cal Intake</div>
+      <div class="dc-value">1,840</div>
+      <div class="dc-sub">of 2,200 goal</div>
+      <div class="dc-bar"><div class="dc-fill" style="width:83%;background:linear-gradient(90deg,#00d4b8,#1a7cff)"></div></div>
+    </div>
+    <div class="dash-card">
+      <div class="dc-icon">&#x1F3CB;</div>
+      <div class="dc-label">Fit Burn</div>
+      <div class="dc-value">312</div>
+      <div class="dc-sub">from exercise</div>
+      <div class="dc-bar"><div class="dc-fill" style="width:65%;background:var(--green)"></div></div>
     </div>
   </div>
 
@@ -793,41 +968,32 @@
     <span class="store-badge">Target</span>
     <span class="store-badge">GNC</span>
     <span class="store-badge">iHerb</span>
-    <span class="store-badge">Vitamin Shoppe</span>
   </div>
 
   <div class="product-grid">
     <div class="product-card">
-      <div class="pc-icon">&#x1F48A;</div>
-      <div class="pc-brand">NightOwl Labs &middot; Amazon</div>
-      <div class="pc-name">Magnesium Glycinate 400mg</div>
+      <div class="pc-name-row"><span class="pc-icon">&#x1F48A;</span><div><div class="pc-brand">NightOwl Labs &middot; Amazon</div><div class="pc-name">Magnesium Glycinate 400mg</div></div></div>
       <div class="pc-footer">
         <span class="pc-price">$24.00</span>
         <span class="pc-store">Amazon</span>
       </div>
     </div>
     <div class="product-card">
-      <div class="pc-icon">&#x1F93A;</div>
-      <div class="pc-brand">Zengrove &middot; Walmart</div>
-      <div class="pc-name">Premium Yoga Mat 6mm</div>
+      <div class="pc-name-row"><span class="pc-icon">&#x1F93A;</span><div><div class="pc-brand">Zengrove &middot; Walmart</div><div class="pc-name">Premium Yoga Mat 6mm</div></div></div>
       <div class="pc-footer">
         <span class="pc-price">$79.00</span>
         <span class="pc-store">Walmart</span>
       </div>
     </div>
     <div class="product-card">
-      <div class="pc-icon">&#x1F3CB;</div>
-      <div class="pc-brand">VitaCore &middot; Target</div>
-      <div class="pc-name">Whey Protein 5lb</div>
+      <div class="pc-name-row"><span class="pc-icon">&#x1F3CB;</span><div><div class="pc-brand">VitaCore &middot; Target</div><div class="pc-name">Whey Protein 5lb</div></div></div>
       <div class="pc-footer">
         <span class="pc-price">$54.00</span>
         <span class="pc-store">Target</span>
       </div>
     </div>
     <div class="product-card">
-      <div class="pc-icon">&#x1F9D0;</div>
-      <div class="pc-brand">FlexBand &middot; Amazon</div>
-      <div class="pc-name">Resistance Bands Set</div>
+      <div class="pc-name-row"><span class="pc-icon">&#x1F9D0;</span><div><div class="pc-brand">FlexBand &middot; Amazon</div><div class="pc-name">Resistance Bands Set</div></div></div>
       <div class="pc-footer">
         <span class="pc-price">$32.00</span>
         <span class="pc-store">Amazon</span>
@@ -1005,7 +1171,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <img src="https://vicatus.com/vicatus-logo.png" alt="ViCatus" />
+    <img src="https://raw.githubusercontent.com/vicatus/Vicatus.com/main/vicatus-logo.png" alt="ViCatus" />
     ViCatus
   </div>
   <ul class="footer-links">
