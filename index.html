@@ -100,7 +100,7 @@
   /* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   #hero {
     align-items: center; text-align: center;
-    background: var(--bg);
+    background: var(--surface);
     gap: 0;
     padding-bottom: 48px;
   }
@@ -223,28 +223,28 @@
   .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 12px;
+    gap: 8px;
+    margin-bottom: 8px;
   }
   .dash-card {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 12px; padding: 11px 16px;
+    border-radius: 12px; padding: 5px 16px;
   }
-  .dash-card .dc-icon { font-size: 1rem; margin-bottom: 6px; }
-  .dash-card .dc-label { font-size: var(--t-xs); color: var(--muted); margin-bottom: 4px; }
+  .dash-card .dc-icon { font-size: 0.9rem; margin-bottom: 3px; }
+  .dash-card .dc-label { font-size: var(--t-xs); color: var(--muted); margin-bottom: 2px; }
   .dash-card .dc-value {
-    font-family: var(--font-display); font-size: var(--t-xl); font-weight: 700;
+    font-family: var(--font-display); font-size: var(--t-lg); font-weight: 700;
     color: var(--text);
   }
-  .dash-card .dc-sub { font-size: var(--t-xs); color: var(--dim); margin-top: 2px; }
+  .dash-card .dc-sub { font-size: var(--t-xs); color: var(--dim); margin-top: 1px; }
   .dash-card .dc-bar {
-    height: 3px; background: var(--border); border-radius: 2px; margin-top: 8px;
+    height: 3px; background: var(--border); border-radius: 2px; margin-top: 5px;
   }
   .dash-card .dc-fill { height: 100%; border-radius: 2px; background: var(--accent); }
 
   .fat-loss-card {
     background: var(--card); border: 1px solid rgba(34,197,94,0.25);
-    border-radius: 12px; padding: 16px 20px;
+    border-radius: 12px; padding: 7px 20px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .flc-left .flc-val {
@@ -265,7 +265,7 @@
   }
   .macro-card {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 12px; padding: 10px;
+    border-radius: 12px; padding: 7px;
     text-align: center;
   }
   .mc-label { font-size: var(--t-xs); color: var(--muted); margin-bottom: 4px; }
@@ -280,7 +280,7 @@
   .recipe-list { display: flex; flex-direction: column; gap: 8px; }
   .recipe-item {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 10px; padding: 12px 16px;
+    border-radius: 10px; padding: 8px 16px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .ri-left { display: flex; align-items: center; gap: 10px; }
@@ -298,7 +298,7 @@
 
   .ai-input-demo {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 12px; padding: 14px 18px; margin-bottom: 14px;
+    border-radius: 12px; padding: 9px 18px; margin-bottom: 10px;
   }
   .ai-input-demo .ai-label { font-size: var(--t-xs); color: var(--accent); font-weight: 600; margin-bottom: 6px; }
   .ai-input-demo .ai-text { font-size: var(--t-sm); color: var(--muted); font-style: italic; }
@@ -306,7 +306,7 @@
   .workout-log { display: flex; flex-direction: column; gap: 6px; }
   .wo-item {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 10px; padding: 8px 16px;
+    border-radius: 10px; padding: 6px 16px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .wo-name { font-size: var(--t-sm); font-weight: 600; }
@@ -314,9 +314,9 @@
   .wo-kcal { font-size: var(--t-xs); color: var(--accent); font-weight: 600; }
   .wo-total {
     background: rgba(0,212,184,0.06); border: 1px solid rgba(0,212,184,0.2);
-    border-radius: 10px; padding: 10px 16px;
+    border-radius: 10px; padding: 7px 16px;
     text-align: center; font-size: var(--t-sm); color: var(--accent); font-weight: 600;
-    margin-top: 8px;
+    margin-top: 6px;
   }
 
   /* â”€â”€ MARKETPLACE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -437,7 +437,7 @@
     flex-wrap: wrap; gap: 12px;
   }
   .footer-brand {
-    display: flex; align-items: center; gap: 0;
+    display: flex; align-items: center; gap: 8px;
     font-family: var(--font-display); font-weight: 700; font-size: var(--t-md);
   }
   .footer-brand img { height: 22px; width: auto; border-radius: 0; background: none; display: block; }
@@ -518,7 +518,7 @@
     background: var(--card);
     border: 1px solid rgba(0,212,184,0.25);
     border-radius: 20px;
-    padding: 20px 32px;
+    padding: 14px 32px;
     text-align: center;
     flex-shrink: 0;
     min-width: 200px;
@@ -555,7 +555,7 @@
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 9px 16px;
+    padding: 6px 16px;
   }
   .rs-card .rsc-label {
     font-size: var(--t-xs); color: var(--muted); margin-bottom: 6px;
@@ -588,12 +588,10 @@
 
 
 
-  .title-break { display: none; }
-  .title-break::after { content: " "; }
+  .title-break { display: inline; }
 
   @media (max-width: 768px) {
     .title-break { display: block; }
-    .title-break::after { content: ""; }
     nav { padding: 0 20px; }
     .nav-links { display: none; }
 
@@ -774,6 +772,7 @@
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">
+    <img src="https://raw.githubusercontent.com/netzearo/vicatus.com/main/vicatus-logo.png" alt="ViCatus" />
     <span class="nav-logo-text"><span class="nav-vi">Vi</span><span class="nav-catus nav-catus-text">Catus</span></span>
   </a>
   <ul class="nav-links">
@@ -788,6 +787,7 @@
 <section id="hero">
   <div class="hero-badge"><span></span> Now live on iOS & Android</div>
   <div class="hero-title-row">
+    <img src="https://raw.githubusercontent.com/netzearo/vicatus.com/main/vicatus-logo.png" alt="ViCatus logo" class="hero-logo" />
     <h1 class="hero-title"><span class="hero-vi">Vi</span><span class="hero-catus">Catus</span></h1>
   </div>
   <p class="hero-sub">Track &middot; Eat Smart &middot; Shop &middot; Reach Your Goal</p>
@@ -822,7 +822,7 @@
 <!-- LIVE DASHBOARD -->
 <section id="dashboard">
   <p class="section-label">Live Dashboard</p>
-  <h2 class="section-title">Every number.<br class="title-break">One glance.</h2>
+  <h2 class="section-title">Every number.<span class="title-break"> </span>One glance.</h2>
 
   <div class="dashboard-grid">
     <div class="dash-card">
@@ -884,7 +884,7 @@
 <!-- AI MEALS -->
 <section id="meals">
   <p class="section-label">AI Meal Planning</p>
-  <h2 class="section-title">Track calories.<br class="title-break">Hit your macros.</h2>
+  <h2 class="section-title">Track calories.<span class="title-break"> </span>Hit your macros.</h2>
   <p style="font-size:var(--t-sm);color:var(--muted);margin-bottom:16px;">Just describe what you ate &mdash; ViCatus extracts every calorie, protein, and macro automatically.</p>
 
   <div class="macros-row">
@@ -939,7 +939,7 @@
 <!-- AI WORKOUT -->
 <section id="workout">
   <p class="section-label">AI Workout Logger</p>
-  <h2 class="section-title">Just describe<br class="title-break">your workout.</h2>
+  <h2 class="section-title">Just describe<span class="title-break"> </span>your workout.</h2>
   <p style="font-size:var(--t-sm);color:var(--muted);margin-bottom:16px;">No forms. No dropdowns. Type it like you'd say it &mdash; AI logs every set, rep, and calorie burned.</p>
 
   <div class="ai-input-demo">
@@ -976,7 +976,7 @@
 <!-- MARKETPLACE -->
 <section id="marketplace">
   <p class="section-label">Health Marketplace</p>
-  <h2 class="section-title">Your health store.<br class="title-break">Inside the app.</h2>
+  <h2 class="section-title">Your health store.<span class="title-break"> </span>Inside the app.</h2>
   <p style="font-size:var(--t-sm);color:var(--muted);margin-bottom:14px;">Shop thousands of health and fitness products without leaving ViCatus.</p>
 
   <div class="store-logos">
@@ -1022,7 +1022,7 @@
 <!-- FEATURES -->
 <section id="features">
   <p class="section-label">Features</p>
-  <h2 class="section-title">Six pillars.<br class="title-break">One dashboard.</h2>
+  <h2 class="section-title">Six pillars.<span class="title-break"> </span>One dashboard.</h2>
   <p style="font-size:var(--t-sm);color:var(--muted);margin-bottom:18px;">ViCatus connects every part of your health so you never juggle apps again.</p>
 
   <div class="features-grid">
@@ -1113,7 +1113,7 @@
 <section id="results">
   <div class="results-intro">
     <p class="section-label">Real Results</p>
-    <h2 class="section-title">Real person.<br class="title-break">Real data.</h2>
+    <h2 class="section-title">Real person.<span class="title-break"> </span>Real data.</h2>
     <p>No testimonials were written for this. These are live numbers pulled directly from the ViCatus app &mdash; tracked by a real user over 4 weeks.</p>
   </div>
 
@@ -1194,7 +1194,8 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <span class="nav-vi">Vi</span><span class="nav-catus">Catus</span>
+    <img src="https://raw.githubusercontent.com/netzearo/vicatus.com/main/vicatus-logo.png" alt="ViCatus" />
+    <span class="nav-logo-text"><span class="nav-vi">Vi</span><span class="nav-catus nav-catus-text">Catus</span></span>
   </div>
   <ul class="footer-links">
     <li><a href="privacy.html">Privacy Policy</a></li>
