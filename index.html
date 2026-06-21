@@ -230,8 +230,9 @@
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
     border-radius: 12px; padding: 5px 16px;
   }
-  .dash-card .dc-icon { font-size: 0.9rem; margin-bottom: 3px; }
-  .dash-card .dc-label { font-size: var(--t-xs); color: var(--muted); margin-bottom: 2px; }
+  .dash-card .dc-head { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .dash-card .dc-icon { font-size: 0.85rem; margin-bottom: 0; }
+  .dash-card .dc-label { font-size: var(--t-xs); color: var(--muted); margin-bottom: 0; }
   .dash-card .dc-value {
     font-family: var(--font-display); font-size: var(--t-lg); font-weight: 700;
     color: var(--text);
@@ -265,7 +266,7 @@
   }
   .macro-card {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 12px; padding: 7px;
+    border-radius: 12px; padding: 5px;
     text-align: center;
   }
   .mc-label { font-size: var(--t-xs); color: var(--muted); margin-bottom: 4px; }
@@ -277,10 +278,10 @@
   .mc-val.fat { color: var(--green); }
   .mc-unit { font-size: var(--t-xs); color: var(--dim); }
 
-  .recipe-list { display: flex; flex-direction: column; gap: 8px; }
+  .recipe-list { display: flex; flex-direction: column; gap: 6px; }
   .recipe-item {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 10px; padding: 8px 16px;
+    border-radius: 10px; padding: 6px 16px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .ri-left { display: flex; align-items: center; gap: 10px; }
@@ -298,15 +299,15 @@
 
   .ai-input-demo {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 12px; padding: 9px 18px; margin-bottom: 10px;
+    border-radius: 12px; padding: 7px 18px; margin-bottom: 8px;
   }
   .ai-input-demo .ai-label { font-size: var(--t-xs); color: var(--accent); font-weight: 600; margin-bottom: 6px; }
   .ai-input-demo .ai-text { font-size: var(--t-sm); color: var(--muted); font-style: italic; }
 
-  .workout-log { display: flex; flex-direction: column; gap: 6px; }
+  .workout-log { display: flex; flex-direction: column; gap: 5px; }
   .wo-item {
     background: var(--card); border: 1px solid rgba(0,212,184,0.25);
-    border-radius: 10px; padding: 6px 16px;
+    border-radius: 10px; padding: 4px 16px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .wo-name { font-size: var(--t-sm); font-weight: 600; }
@@ -641,8 +642,9 @@
       margin-bottom: 10px;
     }
     .dash-card { padding: 12px 12px; }
-    .dash-card .dc-icon { font-size: 0.95rem; margin-bottom: 5px; }
-    .dash-card .dc-label { font-size: 0.65rem; margin-bottom: 3px; }
+    .dash-card .dc-head { display: block; margin-bottom: 0; }
+    .dash-card .dc-icon { font-size: 0.95rem; margin-bottom: 5px; display: block; }
+    .dash-card .dc-label { font-size: 0.65rem; margin-bottom: 3px; display: block; }
     .dash-card .dc-value { font-size: 1.15rem; }
     .dash-card .dc-sub { font-size: 0.62rem; margin-top: 2px; }
     .dash-card .dc-bar { margin-top: 6px; height: 3px; }
@@ -826,43 +828,37 @@
 
   <div class="dashboard-grid">
     <div class="dash-card">
-      <div class="dc-icon">&#x1F45F;</div>
-      <div class="dc-label">Steps</div>
+      <div class="dc-head"><span class="dc-icon">&#x1F45F;</span><span class="dc-label">Steps</span></div>
       <div class="dc-value">10,833</div>
       <div class="dc-sub">of 15,000 goal</div>
       <div class="dc-bar"><div class="dc-fill" style="width:72%;background:linear-gradient(90deg,#00d4b8,#1a7cff)"></div></div>
     </div>
     <div class="dash-card">
-      <div class="dc-icon">&#x1F525;</div>
-      <div class="dc-label">Cal Burn</div>
+      <div class="dc-head"><span class="dc-icon">&#x1F525;</span><span class="dc-label">Cal Burn</span></div>
       <div class="dc-value">966</div>
       <div class="dc-sub">TDEE today</div>
       <div class="dc-bar"><div class="dc-fill" style="width:58%;background:linear-gradient(90deg,#00d4b8,#1a7cff)"></div></div>
     </div>
     <div class="dash-card">
-      <div class="dc-icon">&#x26A1;</div>
-      <div class="dc-label">Deficit</div>
+      <div class="dc-head"><span class="dc-icon">&#x26A1;</span><span class="dc-label">Deficit</span></div>
       <div class="dc-value">+1,596</div>
       <div class="dc-sub">kcal in deficit</div>
       <div class="dc-bar"><div class="dc-fill" style="width:88%;background:var(--green)"></div></div>
     </div>
     <div class="dash-card">
-      <div class="dc-icon">&#x2696;</div>
-      <div class="dc-label">Weight</div>
+      <div class="dc-head"><span class="dc-icon">&#x2696;</span><span class="dc-label">Weight</span></div>
       <div class="dc-value">77.5kg</div>
       <div class="dc-sub">&minus;1kg this week</div>
       <div class="dc-bar"><div class="dc-fill" style="width:40%;background:var(--blue)"></div></div>
     </div>
     <div class="dash-card">
-      <div class="dc-icon">&#x1F37D;</div>
-      <div class="dc-label">Cal Intake</div>
+      <div class="dc-head"><span class="dc-icon">&#x1F37D;</span><span class="dc-label">Cal Intake</span></div>
       <div class="dc-value">1,840</div>
       <div class="dc-sub">of 2,200 goal</div>
       <div class="dc-bar"><div class="dc-fill" style="width:83%;background:linear-gradient(90deg,#00d4b8,#1a7cff)"></div></div>
     </div>
     <div class="dash-card">
-      <div class="dc-icon">&#x1F3CB;</div>
-      <div class="dc-label">Fit Burn</div>
+      <div class="dc-head"><span class="dc-icon">&#x1F3CB;</span><span class="dc-label">Fit Burn</span></div>
       <div class="dc-value">312</div>
       <div class="dc-sub">from exercise</div>
       <div class="dc-bar"><div class="dc-fill" style="width:65%;background:var(--green)"></div></div>
